@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset="UTF-8">
+  <title> doublecheck </title>
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="Group 01">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="all">
+  <link rel="icon" href="../assets/favicon.png" sizes="16x16" type="image/png">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/q1.css">
+  <!-- JS -->
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/gsap.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/p5.min.js"></script>
+  <script src="../js/sketch-q1.js"></script>
+</head>
+
+<body class="animate-in">
+  <main>
+
+    <table class="table">
+      <!-- testo che si muove -->
+      <thead>
+        <tr>
+          <th class="rect" colspan="4" scope="col">
+            <div class="ticker-wrap">
+              <div class="ticker">
+                <div class="ticker__item">Haydi! Doğru seçimi yapın.</div>
+                <div class="ticker__item">Bu sadece bir resim.</div>
+                <div class="ticker__item">Çabuk olun, süre azalıyor.</div>
+                <div class="ticker__item">Cevap hangisi?</div>
+                <div class="ticker__item">Hata yapmak istemezsiniz, değil mi?</div>
+                <div class="ticker__item">Zaman tükeniyor!</div>
+                <div class="ticker__item">Easter egg.</div>
+                <div class="ticker__item">Birkaç saniyeniz kaldı.</div>
+                <div class="ticker__item">Süre bitmek üzere.</div>
+                <div class="ticker__item">Hemen cevap verin!</div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="primariga">
+          <!-- quadrato clessidra -->
+          <th class="clessidra" scope="col">
+            <svg id="imgcles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.92587 44.20658">
+              <g id="CLESSIDRA">
+                <path class="cls-15"
+                  d="M14.46293,43.6607c-5.84458,0-8.40173-1.38309-10.6336-3.61586A13.4415,13.4415,0,0,1,.00938,29.92167c.17886-5.97748,2.83917-7.67594,8.13953-11.06114l1.99895-1.284L9.077,16.3196C6.7505,13.60748,3.2351,9.50866,3.2351,5.18638V0H25.69077V5.18638c0,4.32228-3.5154,8.4211-5.84188,11.13322L18.778,17.57655l1.999,1.284c5.30036,3.3852,7.96067,5.08366,8.13953,11.05754A13.44578,13.44578,0,0,1,25.097,40.04484C22.86466,42.27761,20.30752,43.6607,14.46293,43.6607Zm.0829-4.47185c3.33564,0,5.87792-.81994,7.35112-2.37153a8.76123,8.76123,0,0,0,2.54768-6.69562c-.2194-3.86995-3.18742-7.07224-9.62308-10.38l-.35862-.18381-.35861.18381c-6.43566,3.30772-9.40368,6.51-9.62354,10.38357a8.77844,8.77844,0,0,0,2.57427,6.71814c1.44752,1.52546,3.98935,2.3454,7.325,2.3454h.16579ZM7.70605,5.57112c.22165,4.20154,4.56015,7.949,6.19328,9.36l.51315.44331.56585-.39735c1.68133-1.45248,6.01983-5.2008,6.241-9.40594l.0437-.82625H7.66235Z" />
+                <path class="cls-61" d="M4.48078,30.12531a8.77844,8.77844,0,0,0,2.57427,6.71814c1.44752,1.52546,3.98935,2.3454,7.325,2.3454h.16579c3.33564,0,5.87792-.81994,7.35112-2.37153a8.76123,8.76123,0,0,0,2.54768-6.69562" />
+              </g>
+            </svg>
+          </th>
+          <!-- titolo -->
+          <td colspan="2" sclass="title" scope="col">
+            <p class="titoloriga gradiente">Yanlış başlık atılmış resmi seçin</p>
+          </td>
+          <!-- quadrato numero -->
+          <td class="numero" scope="col">
+            <svg id="NUMERI" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.28507 75.49386">
+              <line class="cls-55" y1="74.94798" x2="74.28507" y2="0.6629" />
+              <text class="cls-16" transform="translate(41.13861 61.05398)">
+                <tspan class="cls-16">1</tspan>
+                <tspan x="9.2002" y="0">2</tspan>
+              </text>
+
+              <text class="cls-16" transform="translate(17.15374 30.66042)">1</text>
+            </svg>
+          </td>
+
+        </tr>
+
+        <tr>
+          <!-- tempo che scorre -->
+          <th class="tempo" scope="row">
+            <div class="rettangolo-segnaposto">
+            </div>
+            <div class="rettangolo-border">
+            </div>
+            <div class="rettangolo-rosso">
+            </div>
+            <div class="rettangolo-bianco">
+            </div>
+          </th>
+
+          <!-- opzioni -->
+          <td colspan="2" class="principale">
+            <!-- POLICE1svg -->
+            <div class="Q">
+              <svg id="Q1" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1444.29 694.28">
+                <defs>
+                  <style>
+                    .cls-101, .cls-102, .cls-103 {
+                      fill: none;
+                    }
+
+                    .cls-104 {
+                      font-size: 18px;
+                    }
+
+                    .cls-104, .cls-105, .cls-106 {
+                      font-family: MuseoModerno-Regular, MuseoModerno;
+                    }
+
+                    .cls-107 {
+                      letter-spacing: -.04em;
+                    }
+
+                    .cls-108 {
+                      letter-spacing: -.04em;
+                    }
+
+                    .cls-109 {
+                      letter-spacing: -.04em;
+                    }
+
+                    .cls-1010 {
+                      letter-spacing: -.02em;
+                    }
+
+                    .cls-1011 {
+                      letter-spacing: -.02em;
+                    }
+
+                    .cls-1012 {
+                      letter-spacing: -.02em;
+                    }
+
+                    .cls-105 {
+                      font-size: 18.82px;
+                    }
+
+                    .cls-1013 {
+                      letter-spacing: -.03em;
+                    }
+
+                    .cls-1014 {
+                      letter-spacing: -.03em;
+                    }
+
+                    .cls-1015, .cls-1016 {
+                      fill: #fff;
+                    }
+
+                    .cls-1017, .cls-1018 {
+                      fill: #dc3545;
+                    }
+
+                    .cls-1019 {
+                      letter-spacing: -.06em;
+                    }
+
+                    .cls-1020 {
+                      letter-spacing: -.06em;
+                    }
+
+                    .cls-1021, .cls-1016, .cls-1022, .cls-1018, .cls-102, .cls-103 {
+                      stroke-width: 2px;
+                    }
+
+                    .cls-1021, .cls-1016, .cls-1022, .cls-1018, .cls-102, .cls-103, .cls-1023 {
+                      stroke-miterlimit: 10;
+                    }
+
+                    .cls-1021, .cls-1016, .cls-1022, .cls-1018, .cls-103, .cls-1023 {
+                      stroke: #dc3545;
+                    }
+
+                    .cls-1021, .cls-1023 {
+                      fill: #eaeaea;
+                    }
+
+                    .cls-1022 {
+                      fill: #28a546;
+                    }
+
+                    .cls-1024 {
+                      fill: url(#Nuovo_pattern_3);
+                    }
+
+                    .cls-1025 {
+                      letter-spacing: -.02em;
+                    }
+
+                    .cls-1026 {
+                      fill: url(#Nuovo_pattern_3-2);
+                    }
+
+                    .cls-102 {
+                      stroke: #000;
+                    }
+
+                    .cls-1027 {
+                      letter-spacing: -.05em;
+                    }
+
+                    .cls-1028 {
+                      letter-spacing: -.05em;
+                    }
+
+                    .cls-1023 {
+                      stroke-width: 2.09px;
+                    }
+
+                    .cls-1029 {
+                      letter-spacing: .02em;
+                    }
+
+                    .cls-1030 {
+                      letter-spacing: .02em;
+                    }
+
+                    .cls-1031 {
+                      letter-spacing: -.02em;
+                    }
+
+                    .cls-106 {
+                      font-size: 15px;
+                    }
+
+                    .cls-1032 {
+                      letter-spacing: -.02em;
+                    }
+
+                    .cls-1033 {
+                      letter-spacing: -.01em;
+                    }
+
+                    .cls-1034 {
+                      font-family: KozGoPr6N-Regular-83pv-RKSJ-H, 'Kozuka Gothic Pr6N';
+                      font-size: 20px;
+                    }
+
+                    .cls-1035 {
+                      letter-spacing: 0em;
+                    }
+                  </style>
+                  <pattern id="Nuovo_pattern_3" data-name="Nuovo pattern 3" x="0" y="0" width="110" height="110" patternTransform="translate(4466.55 5486.46)" patternUnits="userSpaceOnUse" viewBox="0 0 110 110">
+                    <g>
+                      <rect class="cls-101" width="110" height="110"/>
+                      <circle cx="110" cy="110" r="1.32"/>
+                      <g>
+                        <circle cy="110" r="1.32"/>
+                        <circle cx="11" cy="110" r="1.32"/>
+                        <circle cx="22" cy="110" r="1.32"/>
+                        <circle cx="33" cy="110" r="1.32"/>
+                        <circle cx="44" cy="110" r="1.32"/>
+                        <circle cx="55" cy="110" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="110" r="1.32"/>
+                          <circle cx="77.55" cy="110" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="110" r="1.32"/>
+                        <circle cx="99" cy="110" r="1.32"/>
+                        <circle cx="110" cy="110" r="1.32"/>
+                      </g>
+                      <circle cy="110" r="1.32"/>
+                      <g>
+                        <circle cx="110" r="1.32"/>
+                        <circle cx="110" cy="11" r="1.32"/>
+                        <circle cx="110" cy="22" r="1.32"/>
+                        <circle cx="110" cy="33" r="1.32"/>
+                        <circle cx="110" cy="44" r="1.32"/>
+                        <circle cx="110" cy="55" r="1.32"/>
+                        <circle cx="110" cy="66" r="1.32"/>
+                        <circle cx="110" cy="77" r="1.32"/>
+                        <circle cx="110" cy="88" r="1.32"/>
+                        <circle cx="110" cy="99" r="1.32"/>
+                        <circle cx="110" cy="110" r="1.32"/>
+                      </g>
+                      <g>
+                        <circle r="1.32"/>
+                        <circle cx="11" r="1.32"/>
+                        <circle cx="22" r="1.32"/>
+                        <circle cx="33" r="1.32"/>
+                        <circle cx="44" r="1.32"/>
+                        <circle cx="55" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" r="1.32"/>
+                          <circle cx="77.55" r="1.32"/>
+                        </g>
+                        <circle cx="88" r="1.32"/>
+                        <circle cx="99" r="1.32"/>
+                        <circle cx="110" r="1.32"/>
+                        <circle cx="5.25" cy="5.5" r="1.32"/>
+                        <circle cx="16.25" cy="5.5" r="1.32"/>
+                        <circle cx="27.25" cy="5.5" r="1.32"/>
+                        <circle cx="38.25" cy="5.5" r="1.32"/>
+                        <circle cx="49.25" cy="5.5" r="1.32"/>
+                        <circle cx="60.25" cy="5.5" r="1.32"/>
+                        <circle cx="71.75" cy="5.5" r="1.32"/>
+                        <circle cx="82.75" cy="5.5" r="1.32"/>
+                        <circle cx="93.75" cy="5.5" r="1.32"/>
+                        <circle cx="104.75" cy="5.5" r="1.32"/>
+                        <circle cy="11" r="1.32"/>
+                        <circle cx="11" cy="11" r="1.32"/>
+                        <circle cx="22" cy="11" r="1.32"/>
+                        <circle cx="33" cy="11" r="1.32"/>
+                        <circle cx="44" cy="11" r="1.32"/>
+                        <circle cx="55" cy="11" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="11" r="1.32"/>
+                          <circle cx="77.55" cy="11" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="11" r="1.32"/>
+                        <circle cx="99" cy="11" r="1.32"/>
+                        <circle cx="110" cy="11" r="1.32"/>
+                        <circle cx="5.25" cy="16.5" r="1.32"/>
+                        <circle cx="16.25" cy="16.5" r="1.32"/>
+                        <circle cx="27.25" cy="16.5" r="1.32"/>
+                        <circle cx="38.25" cy="16.5" r="1.32"/>
+                        <circle cx="49.25" cy="16.5" r="1.32"/>
+                        <circle cx="60.25" cy="16.5" r="1.32"/>
+                        <circle cx="71.75" cy="16.5" r="1.32"/>
+                        <circle cx="82.75" cy="16.5" r="1.32"/>
+                        <circle cx="93.75" cy="16.5" r="1.32"/>
+                        <circle cx="104.75" cy="16.5" r="1.32"/>
+                        <circle cy="22" r="1.32"/>
+                        <circle cx="11" cy="22" r="1.32"/>
+                        <circle cx="22" cy="22" r="1.32"/>
+                        <circle cx="33" cy="22" r="1.32"/>
+                        <circle cx="44" cy="22" r="1.32"/>
+                        <circle cx="55" cy="22" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="22" r="1.32"/>
+                          <circle cx="77.55" cy="22" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="22" r="1.32"/>
+                        <circle cx="99" cy="22" r="1.32"/>
+                        <circle cx="110" cy="22" r="1.32"/>
+                        <circle cx="5.25" cy="27.5" r="1.32"/>
+                        <circle cx="16.25" cy="27.5" r="1.32"/>
+                        <circle cx="27.25" cy="27.5" r="1.32"/>
+                        <circle cx="38.25" cy="27.5" r="1.32"/>
+                        <circle cx="49.25" cy="27.5" r="1.32"/>
+                        <circle cx="60.25" cy="27.5" r="1.32"/>
+                        <circle cx="71.75" cy="27.5" r="1.32"/>
+                        <circle cx="82.75" cy="27.5" r="1.32"/>
+                        <circle cx="93.75" cy="27.5" r="1.32"/>
+                        <circle cx="104.75" cy="27.5" r="1.32"/>
+                        <circle cy="33" r="1.32"/>
+                        <circle cx="11" cy="33" r="1.32"/>
+                        <circle cx="22" cy="33" r="1.32"/>
+                        <circle cx="33" cy="33" r="1.32"/>
+                        <circle cx="44" cy="33" r="1.32"/>
+                        <circle cx="55" cy="33" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="33" r="1.32"/>
+                          <circle cx="77.55" cy="33" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="33" r="1.32"/>
+                        <circle cx="99" cy="33" r="1.32"/>
+                        <circle cx="110" cy="33" r="1.32"/>
+                        <circle cx="5.25" cy="38.5" r="1.32"/>
+                        <circle cx="16.25" cy="38.5" r="1.32"/>
+                        <circle cx="27.25" cy="38.5" r="1.32"/>
+                        <circle cx="38.25" cy="38.5" r="1.32"/>
+                        <circle cx="49.25" cy="38.5" r="1.32"/>
+                        <circle cx="60.25" cy="38.5" r="1.32"/>
+                        <circle cx="71.75" cy="38.5" r="1.32"/>
+                        <circle cx="82.75" cy="38.5" r="1.32"/>
+                        <circle cx="93.75" cy="38.5" r="1.32"/>
+                        <circle cx="104.75" cy="38.5" r="1.32"/>
+                        <circle cy="44" r="1.32"/>
+                        <circle cx="11" cy="44" r="1.32"/>
+                        <circle cx="22" cy="44" r="1.32"/>
+                        <circle cx="33" cy="44" r="1.32"/>
+                        <circle cx="44" cy="44" r="1.32"/>
+                        <circle cx="55" cy="44" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="44" r="1.32"/>
+                          <circle cx="77.55" cy="44" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="44" r="1.32"/>
+                        <circle cx="99" cy="44" r="1.32"/>
+                        <circle cx="110" cy="44" r="1.32"/>
+                        <circle cx="5.25" cy="49.5" r="1.32"/>
+                        <circle cx="16.25" cy="49.5" r="1.32"/>
+                        <circle cx="27.25" cy="49.5" r="1.32"/>
+                        <circle cx="38.25" cy="49.5" r="1.32"/>
+                        <circle cx="49.25" cy="49.5" r="1.32"/>
+                        <circle cx="60.25" cy="49.5" r="1.32"/>
+                        <circle cx="71.75" cy="49.5" r="1.32"/>
+                        <circle cx="82.75" cy="49.5" r="1.32"/>
+                        <circle cx="93.75" cy="49.5" r="1.32"/>
+                        <circle cx="104.75" cy="49.5" r="1.32"/>
+                        <circle cy="55" r="1.32"/>
+                        <circle cx="11" cy="55" r="1.32"/>
+                        <circle cx="22" cy="55" r="1.32"/>
+                        <circle cx="33" cy="55" r="1.32"/>
+                        <circle cx="44" cy="55" r="1.32"/>
+                        <circle cx="55" cy="55" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="55" r="1.32"/>
+                          <circle cx="77.55" cy="55" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="55" r="1.32"/>
+                        <circle cx="99" cy="55" r="1.32"/>
+                        <circle cx="110" cy="55" r="1.32"/>
+                        <circle cx="5.25" cy="60.5" r="1.32"/>
+                        <circle cx="16.25" cy="60.5" r="1.32"/>
+                        <circle cx="27.25" cy="60.5" r="1.32"/>
+                        <circle cx="38.25" cy="60.5" r="1.32"/>
+                        <circle cx="49.25" cy="60.5" r="1.32"/>
+                        <circle cx="60.25" cy="60.5" r="1.32"/>
+                        <circle cx="71.75" cy="60.5" r="1.32"/>
+                        <circle cx="82.75" cy="60.5" r="1.32"/>
+                        <circle cx="93.75" cy="60.5" r="1.32"/>
+                        <circle cx="104.75" cy="60.5" r="1.32"/>
+                        <circle cy="66" r="1.32"/>
+                        <circle cx="11" cy="66" r="1.32"/>
+                        <circle cx="22" cy="66" r="1.32"/>
+                        <circle cx="33" cy="66" r="1.32"/>
+                        <circle cx="44" cy="66" r="1.32"/>
+                        <circle cx="55" cy="66" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="66" r="1.32"/>
+                          <circle cx="77.55" cy="66" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="66" r="1.32"/>
+                        <circle cx="99" cy="66" r="1.32"/>
+                        <circle cx="110" cy="66" r="1.32"/>
+                        <circle cx="5.25" cy="71.5" r="1.32"/>
+                        <circle cx="16.25" cy="71.5" r="1.32"/>
+                        <circle cx="27.25" cy="71.5" r="1.32"/>
+                        <circle cx="38.25" cy="71.5" r="1.32"/>
+                        <circle cx="49.25" cy="71.5" r="1.32"/>
+                        <circle cx="60.25" cy="71.5" r="1.32"/>
+                        <circle cx="71.75" cy="71.5" r="1.32"/>
+                        <circle cx="82.75" cy="71.5" r="1.32"/>
+                        <circle cx="93.75" cy="71.5" r="1.32"/>
+                        <circle cx="104.75" cy="71.5" r="1.32"/>
+                        <circle cy="77" r="1.32"/>
+                        <circle cx="11" cy="77" r="1.32"/>
+                        <circle cx="22" cy="77" r="1.32"/>
+                        <circle cx="33" cy="77" r="1.32"/>
+                        <circle cx="44" cy="77" r="1.32"/>
+                        <circle cx="55" cy="77" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="77" r="1.32"/>
+                          <circle cx="77.55" cy="77" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="77" r="1.32"/>
+                        <circle cx="99" cy="77" r="1.32"/>
+                        <circle cx="110" cy="77" r="1.32"/>
+                        <circle cx="5.25" cy="82.5" r="1.32"/>
+                        <circle cx="16.25" cy="82.5" r="1.32"/>
+                        <circle cx="27.25" cy="82.5" r="1.32"/>
+                        <circle cx="38.25" cy="82.5" r="1.32"/>
+                        <circle cx="49.25" cy="82.5" r="1.32"/>
+                        <circle cx="60.25" cy="82.5" r="1.32"/>
+                        <circle cx="71.75" cy="82.5" r="1.32"/>
+                        <circle cx="82.75" cy="82.5" r="1.32"/>
+                        <circle cx="93.75" cy="82.5" r="1.32"/>
+                        <circle cx="104.75" cy="82.5" r="1.32"/>
+                        <circle cy="88" r="1.32"/>
+                        <circle cx="11" cy="88" r="1.32"/>
+                        <circle cx="22" cy="88" r="1.32"/>
+                        <circle cx="33" cy="88" r="1.32"/>
+                        <circle cx="44" cy="88" r="1.32"/>
+                        <circle cx="55" cy="88" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="88" r="1.32"/>
+                          <circle cx="77.55" cy="88" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="88" r="1.32"/>
+                        <circle cx="99" cy="88" r="1.32"/>
+                        <circle cx="110" cy="88" r="1.32"/>
+                        <circle cx="5.25" cy="93.5" r="1.32"/>
+                        <circle cx="16.25" cy="93.5" r="1.32"/>
+                        <circle cx="27.25" cy="93.5" r="1.32"/>
+                        <circle cx="38.25" cy="93.5" r="1.32"/>
+                        <circle cx="49.25" cy="93.5" r="1.32"/>
+                        <circle cx="60.25" cy="93.5" r="1.32"/>
+                        <circle cx="71.75" cy="93.5" r="1.32"/>
+                        <circle cx="82.75" cy="93.5" r="1.32"/>
+                        <circle cx="93.75" cy="93.5" r="1.32"/>
+                        <circle cx="104.75" cy="93.5" r="1.32"/>
+                        <circle cy="99" r="1.32"/>
+                        <circle cx="11" cy="99" r="1.32"/>
+                        <circle cx="22" cy="99" r="1.32"/>
+                        <circle cx="33" cy="99" r="1.32"/>
+                        <circle cx="44" cy="99" r="1.32"/>
+                        <circle cx="55" cy="99" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="99" r="1.32"/>
+                          <circle cx="77.55" cy="99" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="99" r="1.32"/>
+                        <circle cx="99" cy="99" r="1.32"/>
+                        <circle cx="110" cy="99" r="1.32"/>
+                        <circle cx="5.25" cy="104.5" r="1.32"/>
+                        <circle cx="16.25" cy="104.5" r="1.32"/>
+                        <circle cx="27.25" cy="104.5" r="1.32"/>
+                        <circle cx="38.25" cy="104.5" r="1.32"/>
+                        <circle cx="49.25" cy="104.5" r="1.32"/>
+                        <circle cx="60.25" cy="104.5" r="1.32"/>
+                        <circle cx="71.75" cy="104.5" r="1.32"/>
+                        <circle cx="82.75" cy="104.5" r="1.32"/>
+                        <circle cx="93.75" cy="104.5" r="1.32"/>
+                        <circle cx="104.75" cy="104.5" r="1.32"/>
+                        <circle cy="110" r="1.32"/>
+                        <circle cx="11" cy="110" r="1.32"/>
+                        <circle cx="22" cy="110" r="1.32"/>
+                        <circle cx="33" cy="110" r="1.32"/>
+                        <circle cx="44" cy="110" r="1.32"/>
+                        <circle cx="55" cy="110" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" cy="110" r="1.32"/>
+                          <circle cx="77.55" cy="110" r="1.32"/>
+                        </g>
+                        <circle cx="88" cy="110" r="1.32"/>
+                        <circle cx="99" cy="110" r="1.32"/>
+                        <circle cx="110" cy="110" r="1.32"/>
+                      </g>
+                      <g>
+                        <circle r="1.32"/>
+                        <circle cy="11" r="1.32"/>
+                        <circle cy="22" r="1.32"/>
+                        <circle cy="33" r="1.32"/>
+                        <circle cy="44" r="1.32"/>
+                        <circle cy="55" r="1.32"/>
+                        <circle cy="66" r="1.32"/>
+                        <circle cy="77" r="1.32"/>
+                        <circle cy="88" r="1.32"/>
+                        <circle cy="99" r="1.32"/>
+                        <circle cy="110" r="1.32"/>
+                      </g>
+                      <circle cx="110" r="1.32"/>
+                      <g>
+                        <circle r="1.32"/>
+                        <circle cx="11" r="1.32"/>
+                        <circle cx="22" r="1.32"/>
+                        <circle cx="33" r="1.32"/>
+                        <circle cx="44" r="1.32"/>
+                        <circle cx="55" r="1.32"/>
+                        <g>
+                          <circle cx="65.45" r="1.32"/>
+                          <circle cx="77.55" r="1.32"/>
+                        </g>
+                        <circle cx="88" r="1.32"/>
+                        <circle cx="99" r="1.32"/>
+                        <circle cx="110" r="1.32"/>
+                      </g>
+                      <circle r="1.32"/>
+                    </g>
+                  </pattern>
+                  <pattern id="Nuovo_pattern_3-2" data-name="Nuovo pattern 3" patternTransform="translate(4408.22 4990.88)" xlink:href="#Nuovo_pattern_3"/>
+                  <image id="image" width="323" height="200" xlink:href="../assets/HongKong/HongKong.jpg"/>
+                </defs>
+                <g id="texture">
+                  <polygon id="texture-2" data-name="texture" class="cls-1024" points="767.64 574.52 767.64 120.82 1444.29 120.82 1444.29 574.52 767.64 574.52"/>
+                  <polygon id="texture-3" data-name="texture" class="cls-1026" points="19.05 694.28 19.05 23.72 694.44 23.72 694.44 694.28 19.05 694.28"/>
+                </g>
+                <g id="RIGHT01">
+                  <rect class="cls-1021" x="1" y="1" width="676.98" height="676.98"/>
+                  <rect class="cls-1015" x="318.46" y="-314.37" width="42.04" height="674.89" transform="translate(362.55 -316.4) rotate(90)"/>
+                  <line class="cls-103" x1="1" y1="44.09" x2="677.98" y2="44.09"/>
+                  <use transform="translate(72.66 253.17) scale(1.65)" xlink:href="#image"/>
+                  <rect class="cls-102" x="72.78" y="252.99" width="533.43" height="331.27"/>
+                  <text class="cls-1034" transform="translate(130.19 98.04)"><tspan x="0" y="0">菜總統加油</tspan></text>
+                  <text class="cls-106" transform="translate(130.19 115.44)"><tspan class="cls-1035" x="0" y="0">1</tspan><tspan x="6.72" y="0">2/0</tspan><tspan class="cls-1010" x="30.24" y="0">8</tspan><tspan x="39.58" y="0">/</tspan><tspan class="cls-108" x="45.1" y="0">1</tspan><tspan x="51.38" y="0">9</tspan></text>
+                  <text class="cls-104" transform="translate(72.78 150.85)"><tspan x="0" y="0">Bakın!</tspan><tspan class="cls-1019" x="55.24" y="0"> </tspan><tspan class="cls-1028" x="58.93" y="0">T</tspan><tspan x="68.26" y="0">azyikli su kullanıldı. Hong Kong polisi bu insanları </tspan><tspan x="0" y="21.6">öldürmek mi i</tspan><tspan class="cls-1032" x="118.51" y="21.6">s</tspan><tspan x="127.73" y="21.6">tiyor? Gaze</tspan><tspan class="cls-1025" x="225.81" y="21.6">t</tspan><tspan x="232.85" y="21.6">ecileri </tspan><tspan class="cls-1011" x="284.38" y="21.6">v</tspan><tspan x="294.4" y="21.6">e yalnız kadınları bile </tspan><tspan class="cls-1025" x="0" y="43.2">t</tspan><tspan x="7.04" y="43.2">a</tspan><tspan class="cls-1030" x="18.67" y="43.2">r</tspan><tspan class="cls-1025" x="25" y="43.2">t</tspan><tspan x="32.04" y="43.2">akladılar </tspan><tspan class="cls-1011" x="112.95" y="43.2">v</tspan><tspan x="122.97" y="43.2">e insanlara </tspan><tspan class="cls-1025" x="224.08" y="43.2">t</tspan><tspan x="231.12" y="43.2">aş attılar. Hong Kon</tspan><tspan class="cls-107" x="404.24" y="43.2">g</tspan><tspan class="cls-1013" x="415.04" y="43.2">’</tspan><tspan x="418.4" y="43.2">da orman </tspan><tspan x="0" y="64.8">kanunları mı geçerli?</tspan><tspan class="cls-1013" x="175.08" y="64.8"> </tspan><tspan x="179.31" y="64.8">A</tspan><tspan class="cls-1029" x="191.89" y="64.8">r</tspan><tspan x="198.23" y="64.8">tık bunu kaldıramayacağım!</tspan></text>
+                  <text class="cls-105" transform="translate(21.75 29.74)"><tspan class="cls-1020" x="0" y="0">F</tspan><tspan class="cls-1014" x="8.94" y="0">A</tspan><tspan x="21.54" y="0">CEBOOK.COM</tspan></text>
+                  <path class="cls-103" d="M94.61,120.76c-12.04,0-21.83-9.79-21.83-21.83s9.79-21.83,21.83-21.83,21.83,9.79,21.83,21.83-9.79,21.83-21.83,21.83Z"/>
+                  <circle class="cls-1017" cx="94.61" cy="98.93" r="18.33"/>
+                  <text class="cls-106" transform="translate(284.44 637.11)"><tspan x="0" y="0">320 </tspan></text>
+                  <circle class="cls-1022" cx="265.91" cy="630.8" r="9.61"/>
+                  <text class="cls-106" transform="translate(312.41 637.36)"><tspan class="cls-1012" x="0" y="0">P</tspan><tspan x="9.42" y="0">aylaş</tspan></text>
+                  <text class="cls-106" transform="translate(441.47 637.11)"><tspan x="0" y="0">583</tspan></text>
+                  <circle class="cls-1016" cx="423.64" cy="630.8" r="9.61"/>
+                  <text class="cls-106" transform="translate(471.86 637.36)"><tspan class="cls-1027" x="0" y="0">T</tspan><tspan x="7.77" y="0">epki </tspan><tspan class="cls-1012" x="42.55" y="0">v</tspan><tspan x="50.91" y="0">er</tspan></text>
+                  <text class="cls-106" transform="translate(99.99 637.11)"><tspan x="0" y="0">639 </tspan></text>
+                  <circle class="cls-1018" cx="80.38" cy="630.8" r="9.61"/>
+                  <text class="cls-106" transform="translate(129.38 637.36)"><tspan class="cls-109" x="0" y="0">Y</tspan><tspan x="9.91" y="0">orumlar</tspan></text>
+                  <text class="cls-104" transform="translate(124.78 152.21)"><tspan x="0" y="0">,</tspan></text>
+                  <text class="cls-104" transform="translate(381.54 151.08)"><tspan x="0" y="0">:</tspan></text>
+                </g>
+                <g id="WRONG01">
+                  <rect class="cls-1023" x="752.93" y="127.26" width="676.98" height="463.49"/>
+                  <rect class="cls-1015" x="1070.44" y="-187.91" width="42.04" height="674.38" transform="translate(1240.74 -942.18) rotate(90)"/>
+                  <line class="cls-1021" x1="752.93" y1="170.3" x2="1429.9" y2="170.3"/>
+                  <use transform="translate(829.35 264.88) scale(1.62)" xlink:href="#image"/>
+                  <rect class="cls-102" x="829.46" y="264.7" width="523.9" height="326.05"/>
+                  <text class="cls-105" transform="translate(773.68 153.47)"><tspan class="cls-1014" x="0" y="0">D</tspan><tspan x="12.74" y="0">AILYS</tspan><tspan class="cls-1033" x="68.62" y="0">A</tspan><tspan x="81.49" y="0">B</tspan><tspan class="cls-1031" x="94.59" y="0">A</tspan><tspan x="107.47" y="0">H.COM</tspan></text>
+                  <text class="cls-105" transform="translate(1330.35 153.47)"><tspan x="0" y="0">06/02/17</tspan></text>
+                  <g>
+                    <path d="M800.62,198.46c-.56,0-1.01-.19-1.34-.56s-.5-.82-.5-1.34c0-.35,.03-.69,.1-.99,.07-.31,.16-.67,.29-1.08l1.29-4.26h2.18l-1.43,4.65c.41,.11,.72,.35,.94,.7,.21,.35,.32,.71,.32,1.06,0,.5-.18,.93-.55,1.29-.36,.36-.8,.53-1.3,.53Zm5.71,0c-.56,0-1.01-.19-1.34-.56s-.5-.82-.5-1.34c0-.35,.03-.69,.1-.99,.07-.31,.16-.67,.29-1.08l1.29-4.26h2.18l-1.43,4.65c.41,.11,.72,.35,.94,.7,.21,.35,.32,.71,.32,1.06,0,.5-.18,.93-.55,1.29-.36,.36-.8,.53-1.3,.53Z"/>
+                    <path d="M811.29,209.82v-14.5c0-.99,.22-1.87,.67-2.63,.45-.77,1.05-1.37,1.82-1.81,.77-.44,1.63-.66,2.6-.66h6.97v2.38h-6.66c-.82,0-1.48,.26-1.97,.77-.5,.51-.74,1.16-.74,1.95v3.98h8.34v2.38h-8.34v8.15h-2.69Z"/>
+                    <path d="M826.3,209.82v-10.22c0-1.27,.36-2.26,1.08-2.98,.72-.72,1.71-1.08,2.98-1.08h2.94v2.21h-2.46c-.62,0-1.1,.18-1.44,.53s-.52,.85-.52,1.48v10.05h-2.58Z"/>
+                    <path d="M841.62,210.16c-1.38,0-2.58-.33-3.58-.99-1.01-.66-1.78-1.56-2.32-2.7-.54-1.14-.81-2.4-.81-3.78s.3-2.67,.9-3.79c.6-1.13,1.46-2.03,2.58-2.69,1.12-.66,2.46-.99,4.03-.99s2.81,.33,3.89,.98c1.08,.65,1.92,1.54,2.51,2.66,.59,1.12,.88,2.37,.88,3.75v7.22h-2.6v-2.91h-.06c-.28,.54-.66,1.06-1.13,1.55-.48,.5-1.07,.9-1.78,1.22-.71,.32-1.54,.48-2.49,.48Zm.67-2.21c.93,0,1.76-.23,2.48-.69,.72-.46,1.28-1.09,1.68-1.9,.4-.81,.6-1.72,.6-2.73s-.19-1.88-.57-2.66c-.38-.78-.93-1.4-1.64-1.86-.71-.46-1.54-.69-2.49-.69-1.01,0-1.87,.23-2.59,.7-.72,.47-1.27,1.1-1.65,1.89-.38,.79-.57,1.69-.57,2.7s.19,1.85,.56,2.65c.37,.79,.91,1.42,1.62,1.89,.71,.47,1.57,.7,2.58,.7Z"/>
+                    <path d="M853.77,209.82v-8.26c0-1.27,.28-2.38,.85-3.33,.57-.95,1.36-1.69,2.37-2.23,1.01-.53,2.16-.8,3.44-.8s2.46,.27,3.46,.8c1,.53,1.78,1.27,2.35,2.23s.85,2.06,.85,3.33v8.26h-2.58v-8.23c0-.86-.19-1.6-.57-2.23-.38-.62-.89-1.11-1.51-1.44-.63-.34-1.29-.5-2-.5s-1.38,.17-2,.5c-.63,.34-1.13,.82-1.51,1.44-.38,.63-.57,1.37-.57,2.23v8.23h-2.58Z"/>
+                    <path d="M870.99,209.82v-2.21h6.83c.45,0,.84-.1,1.16-.29s.57-.45,.74-.77c.17-.32,.25-.65,.25-1.01,0-.34-.08-.65-.22-.94-.15-.29-.38-.52-.69-.7-.31-.18-.68-.27-1.11-.27h-2.88c-.91,0-1.71-.15-2.39-.46-.68-.31-1.21-.76-1.6-1.36-.38-.6-.57-1.33-.57-2.18,0-.73,.18-1.4,.53-2.02,.35-.62,.85-1.12,1.48-1.5,.63-.38,1.36-.57,2.18-.57h6.58v2.21h-6.33c-.58,0-1.04,.18-1.37,.53s-.5,.78-.5,1.26,.17,.87,.52,1.22,.83,.52,1.47,.52h2.74c1.03,0,1.89,.16,2.59,.49,.7,.33,1.23,.8,1.6,1.41s.55,1.37,.55,2.27c0,.77-.19,1.48-.56,2.14-.37,.66-.89,1.2-1.55,1.61-.66,.41-1.43,.62-2.31,.62h-7.14Z"/>
+                    <path d="M885.94,209.82v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M894.7,209.82c-.6,0-1.13-.14-1.6-.42s-.84-.66-1.11-1.13c-.27-.48-.41-.99-.41-1.55,0-.6,.14-1.12,.43-1.58,.29-.46,.71-.87,1.27-1.25l6.58-4.17c.28-.17,.46-.34,.55-.5s.13-.34,.13-.53c0-.22-.09-.43-.28-.63-.19-.2-.43-.29-.73-.29h-7.25v-2.21h8.04c.58,0,1.1,.14,1.55,.42,.46,.28,.82,.66,1.09,1.13,.27,.48,.41,.99,.41,1.55s-.15,1.11-.43,1.58c-.29,.48-.7,.89-1.25,1.25l-6.58,4.17c-.28,.17-.46,.34-.55,.5s-.13,.35-.13,.53c0,.22,.09,.43,.28,.63s.44,.29,.76,.29h7.64v2.21h-8.43Z"/>
+                    <path d="M921.25,209.82c-1.47,0-2.79-.32-3.95-.95-1.16-.63-2.07-1.49-2.74-2.56-.67-1.07-1.01-2.28-1.01-3.63s.34-2.55,1.01-3.63c.67-1.07,1.59-1.93,2.74-2.56,1.16-.63,2.47-.95,3.95-.95h1.68v2.21h-1.76c-.95,0-1.81,.22-2.56,.66-.76,.44-1.35,1.03-1.79,1.78-.44,.75-.66,1.58-.66,2.49s.22,1.75,.66,2.49c.44,.75,1.04,1.34,1.79,1.78,.76,.44,1.61,.66,2.56,.66h1.76v2.21h-1.68Zm-5.12,5.68l2.63-6.24h2.52l-2.66,6.24h-2.49Z"/>
+                    <path d="M933.23,209.82c-1.57,0-2.96-.29-4.17-.88-1.21-.59-2.16-1.42-2.84-2.49-.68-1.07-1.02-2.33-1.02-3.77s.29-2.69,.87-3.82c.58-1.13,1.38-2.02,2.41-2.67,1.03-.65,2.22-.98,3.58-.98,1.47,0,2.7,.32,3.68,.95,.98,.63,1.71,1.49,2.2,2.56s.73,2.27,.73,3.6c0,.21,0,.42-.01,.64,0,.22-.03,.42-.07,.59h-10.64c.09,.88,.38,1.62,.87,2.23s1.11,1.06,1.86,1.37c.76,.31,1.59,.46,2.51,.46h3.72v2.21h-3.67Zm-5.32-8.09h8.15c0-.35-.04-.73-.11-1.13s-.21-.79-.39-1.18c-.19-.38-.43-.73-.74-1.04-.31-.31-.69-.55-1.15-.74-.46-.19-.99-.28-1.61-.28-.65,0-1.23,.13-1.72,.38-.5,.25-.92,.59-1.27,1.01s-.63,.89-.81,1.41c-.19,.52-.3,1.05-.34,1.57Z"/>
+                    <path d="M947.68,210.16c-.64,0-1.21-.18-1.72-.55s-.89-.88-1.13-1.55l-4.65-12.52h2.83l4.14,11.56c.07,.19,.16,.32,.25,.39,.09,.08,.2,.11,.31,.11,.13,0,.24-.04,.32-.11,.08-.07,.16-.21,.24-.39l4.17-11.56h2.77l-4.65,12.52c-.26,.67-.64,1.19-1.15,1.55s-1.08,.55-1.74,.55Z"/>
+                    <path d="M959.13,193.28c-.47,0-.87-.17-1.22-.52-.35-.34-.52-.75-.52-1.22s.17-.87,.52-1.22,.75-.52,1.22-.52,.87,.17,1.22,.52c.34,.35,.52,.75,.52,1.22s-.17,.87-.52,1.22-.75,.52-1.22,.52Zm-1.32,16.55v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M964.48,209.82v-20.44h2.58v12.15h3.92l3.75-5.99h2.86l-4.06,6.38c1.34,.39,2.39,1.12,3.15,2.2,.76,1.07,1.13,2.32,1.13,3.74v1.96h-2.6v-1.96c0-.78-.17-1.48-.52-2.1-.35-.62-.83-1.11-1.44-1.47-.62-.36-1.33-.55-2.13-.55h-4.06v6.08h-2.58Z"/>
+                    <path d="M988.89,209.82v-20.44h2.58v12.15h3.92l3.75-5.99h2.86l-4.06,6.38c1.34,.39,2.39,1.12,3.15,2.2,.76,1.07,1.13,2.32,1.13,3.74v1.96h-2.6v-1.96c0-.78-.17-1.48-.52-2.1-.35-.62-.83-1.11-1.44-1.47-.62-.36-1.33-.55-2.13-.55h-4.06v6.08h-2.58Z"/>
+                    <path d="M1012.58,210.16c-1.29,0-2.44-.27-3.46-.8-1.02-.53-1.81-1.27-2.38-2.23-.57-.95-.85-2.06-.85-3.33v-8.26h2.6v8.23c0,.86,.19,1.6,.56,2.23,.37,.63,.87,1.11,1.5,1.44,.62,.34,1.29,.5,2,.5s1.4-.17,2.03-.5c.62-.34,1.13-.82,1.51-1.44,.38-.62,.57-1.37,.57-2.23v-8.23h2.6v8.26c0,1.27-.29,2.38-.87,3.33-.58,.95-1.37,1.69-2.38,2.23-1.01,.53-2.16,.8-3.44,.8Z"/>
+                    <path d="M1029.38,210.16c-.64,0-1.21-.18-1.72-.55s-.89-.88-1.13-1.55l-4.65-12.52h2.83l4.14,11.56c.07,.19,.16,.32,.25,.39,.09,.08,.2,.11,.31,.11,.13,0,.24-.04,.32-.11,.08-.07,.16-.21,.24-.39l4.17-11.56h2.77l-4.65,12.52c-.26,.67-.64,1.19-1.15,1.55s-1.08,.55-1.74,.55Z"/>
+                    <path d="M1045.54,210.16c-.64,0-1.21-.18-1.72-.55s-.89-.88-1.13-1.55l-4.65-12.52h2.83l4.14,11.56c.07,.19,.16,.32,.25,.39,.09,.08,.2,.11,.31,.11,.13,0,.24-.04,.32-.11,.08-.07,.16-.21,.24-.39l4.17-11.56h2.77l-4.65,12.52c-.26,.67-.64,1.19-1.15,1.55s-1.08,.55-1.74,.55Z"/>
+                    <path d="M1062.37,209.82c-1.57,0-2.96-.29-4.17-.88-1.21-.59-2.16-1.42-2.84-2.49-.68-1.07-1.02-2.33-1.02-3.77s.29-2.69,.87-3.82c.58-1.13,1.38-2.02,2.41-2.67,1.03-.65,2.22-.98,3.58-.98,1.47,0,2.7,.32,3.68,.95,.98,.63,1.71,1.49,2.2,2.56s.73,2.27,.73,3.6c0,.21,0,.42-.01,.64,0,.22-.03,.42-.07,.59h-10.64c.09,.88,.38,1.62,.87,2.23s1.11,1.06,1.86,1.37c.76,.31,1.59,.46,2.51,.46h3.72v2.21h-3.67Zm-5.32-8.09h8.15c0-.35-.04-.73-.11-1.13s-.21-.79-.39-1.18c-.19-.38-.43-.73-.74-1.04-.31-.31-.69-.55-1.15-.74-.46-.19-.99-.28-1.61-.28-.65,0-1.23,.13-1.72,.38-.5,.25-.92,.59-1.27,1.01s-.63,.89-.81,1.41c-.19,.52-.3,1.05-.34,1.57Z"/>
+                    <path d="M1069.42,197.76v-2.21h9.94v2.21h-9.94Zm6.52,12.07c-1.27,0-2.26-.36-2.98-1.09-.72-.73-1.08-1.72-1.08-2.97v-13.8h2.58v13.64c0,.62,.17,1.11,.52,1.47,.34,.36,.83,.55,1.44,.55h2.88v2.21h-3.36Z"/>
+                    <path d="M1100.08,195.73c.9,.35,1.67,.85,2.32,1.53s1.16,1.48,1.53,2.42c.36,.94,.55,2,.55,3.18,0,1.49-.3,2.79-.91,3.88s-1.43,1.94-2.48,2.53c-1.05,.6-2.23,.9-3.56,.9-.73,0-1.42-.12-2.09-.36-.66-.24-1.25-.58-1.76-1.01-.51-.43-.93-.93-1.25-1.51h-.06v8.71h-2.58v-13.22c0-1.59,.32-2.94,.97-4.07,.64-1.13,1.52-1.99,2.62-2.59s2.34-.9,3.72-.9c1.08,0,2.07,.17,2.97,.52Zm-5.33,2.34c-.72,.43-1.29,1.04-1.71,1.82-.42,.78-.63,1.71-.63,2.77s.21,2.02,.63,2.81c.42,.79,.99,1.4,1.71,1.83,.72,.43,1.52,.64,2.39,.64s1.7-.22,2.41-.67c.71-.45,1.27-1.06,1.69-1.85,.42-.78,.63-1.7,.63-2.74s-.21-2.02-.64-2.8c-.43-.78-1-1.39-1.72-1.82s-1.52-.64-2.39-.64-1.65,.21-2.37,.64Z"/>
+                    <path d="M1114.5,210.16c-1.46,0-2.74-.33-3.86-.99-1.12-.66-2.01-1.56-2.66-2.69-.65-1.13-.98-2.39-.98-3.79s.33-2.67,.98-3.79c.65-1.13,1.54-2.03,2.66-2.69,1.12-.66,2.41-.99,3.86-.99s2.75,.33,3.88,.99c1.13,.66,2.02,1.56,2.66,2.69,.64,1.13,.97,2.39,.97,3.79s-.32,2.66-.97,3.79c-.64,1.13-1.53,2.03-2.66,2.69-1.13,.66-2.42,.99-3.88,.99Zm0-2.21c.99,0,1.85-.23,2.58-.7,.73-.47,1.3-1.1,1.71-1.89,.41-.79,.62-1.68,.62-2.67s-.21-1.88-.62-2.67c-.41-.79-.98-1.42-1.71-1.89-.73-.47-1.59-.7-2.58-.7s-1.82,.23-2.56,.7c-.74,.47-1.31,1.1-1.72,1.89-.41,.79-.62,1.69-.62,2.67s.21,1.88,.62,2.67c.41,.79,.98,1.42,1.72,1.89,.74,.47,1.59,.7,2.56,.7Z"/>
+                    <path d="M1125.31,209.82v-20.44h2.58v20.44h-2.58Z"/>
+                    <path d="M1133.29,193.28c-.47,0-.87-.17-1.22-.52-.35-.34-.52-.75-.52-1.22s.17-.87,.52-1.22,.75-.52,1.22-.52,.87,.17,1.22,.52c.34,.35,.52,.75,.52,1.22s-.17,.87-.52,1.22-.75,.52-1.22,.52Zm-1.32,16.55v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M1138.44,209.82v-2.21h6.83c.45,0,.84-.1,1.16-.29s.57-.45,.74-.77c.17-.32,.25-.65,.25-1.01,0-.34-.08-.65-.22-.94-.15-.29-.38-.52-.69-.7-.31-.18-.68-.27-1.11-.27h-2.88c-.91,0-1.71-.15-2.39-.46-.68-.31-1.21-.76-1.6-1.36-.38-.6-.57-1.33-.57-2.18,0-.73,.18-1.4,.53-2.02,.35-.62,.85-1.12,1.48-1.5,.63-.38,1.36-.57,2.18-.57h6.58v2.21h-6.33c-.58,0-1.04,.18-1.37,.53s-.5,.78-.5,1.26,.17,.87,.52,1.22,.83,.52,1.47,.52h2.74c1.03,0,1.89,.16,2.59,.49,.7,.33,1.23,.8,1.6,1.41s.55,1.37,.55,2.27c0,.77-.19,1.48-.56,2.14-.37,.66-.89,1.2-1.55,1.61-.66,.41-1.43,.62-2.31,.62h-7.14Z"/>
+                    <path d="M1154.71,193.28c-.47,0-.87-.17-1.22-.52-.35-.34-.52-.75-.52-1.22s.17-.87,.52-1.22,.75-.52,1.22-.52,.87,.17,1.22,.52c.34,.35,.52,.75,.52,1.22s-.17,.87-.52,1.22-.75,.52-1.22,.52Zm-1.32,16.55v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M1174.7,210.16c-1.38,0-2.62-.3-3.72-.9-1.1-.6-1.97-1.46-2.62-2.59-.64-1.13-.97-2.49-.97-4.07v-13.22h2.58v8.71h.06c.32-.58,.73-1.08,1.25-1.51,.51-.43,1.1-.76,1.76-1.01,.66-.24,1.36-.36,2.09-.36,1.33,0,2.51,.3,3.56,.9,1.04,.6,1.87,1.44,2.48,2.53,.61,1.09,.91,2.38,.91,3.88,0,1.18-.18,2.24-.55,3.18s-.87,1.75-1.53,2.42-1.43,1.18-2.32,1.53c-.9,.34-1.89,.52-2.97,.52Zm0-2.21c.88,0,1.68-.21,2.39-.64,.72-.43,1.29-1.04,1.72-1.82s.64-1.72,.64-2.8-.21-1.96-.63-2.74c-.42-.78-.99-1.4-1.69-1.85-.71-.45-1.51-.67-2.41-.67s-1.68,.21-2.39,.64c-.72,.43-1.29,1.04-1.71,1.83s-.63,1.73-.63,2.81,.21,1.99,.63,2.77,.99,1.39,1.71,1.82c.72,.43,1.51,.64,2.37,.64Z"/>
+                    <path d="M1186.68,193.28c-.47,0-.87-.17-1.22-.52-.35-.34-.52-.75-.52-1.22s.17-.87,.52-1.22,.75-.52,1.22-.52,.87,.17,1.22,.52c.34,.35,.52,.75,.52,1.22s-.17,.87-.52,1.22-.75,.52-1.22,.52Zm-1.32,16.55v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M1191.95,209.82v-10.22c0-1.27,.36-2.26,1.08-2.98,.72-.72,1.71-1.08,2.98-1.08h2.94v2.21h-2.46c-.62,0-1.1,.18-1.44,.53s-.52,.85-.52,1.48v10.05h-2.58Z"/>
+                    <path d="M1218.94,195.73c.9,.35,1.67,.85,2.32,1.53s1.16,1.48,1.53,2.42c.36,.94,.55,2,.55,3.18,0,1.49-.3,2.79-.91,3.88s-1.43,1.94-2.48,2.53c-1.05,.6-2.23,.9-3.56,.9-.73,0-1.42-.12-2.09-.36-.66-.24-1.25-.58-1.76-1.01-.51-.43-.93-.93-1.25-1.51h-.06v8.71h-2.58v-13.22c0-1.59,.32-2.94,.97-4.07,.64-1.13,1.52-1.99,2.62-2.59s2.34-.9,3.72-.9c1.08,0,2.07,.17,2.97,.52Zm-5.33,2.34c-.72,.43-1.29,1.04-1.71,1.82-.42,.78-.63,1.71-.63,2.77s.21,2.02,.63,2.81c.42,.79,.99,1.4,1.71,1.83,.72,.43,1.52,.64,2.39,.64s1.7-.22,2.41-.67c.71-.45,1.27-1.06,1.69-1.85,.42-.78,.63-1.7,.63-2.74s-.21-2.02-.64-2.8c-.43-.78-1-1.39-1.72-1.82s-1.52-.64-2.39-.64-1.65,.21-2.37,.64Z"/>
+                    <path d="M1226.56,209.82v-10.22c0-1.27,.36-2.26,1.08-2.98,.72-.72,1.71-1.08,2.98-1.08h2.94v2.21h-2.46c-.62,0-1.1,.18-1.44,.53s-.52,.85-.52,1.48v10.05h-2.58Z"/>
+                    <path d="M1242.66,210.16c-1.46,0-2.74-.33-3.86-.99-1.12-.66-2.01-1.56-2.66-2.69-.65-1.13-.98-2.39-.98-3.79s.33-2.67,.98-3.79c.65-1.13,1.54-2.03,2.66-2.69,1.12-.66,2.41-.99,3.86-.99s2.75,.33,3.88,.99c1.13,.66,2.02,1.56,2.66,2.69,.64,1.13,.97,2.39,.97,3.79s-.32,2.66-.97,3.79c-.64,1.13-1.53,2.03-2.66,2.69-1.13,.66-2.42,.99-3.88,.99Zm0-2.21c.99,0,1.85-.23,2.58-.7,.73-.47,1.3-1.1,1.71-1.89,.41-.79,.62-1.68,.62-2.67s-.21-1.88-.62-2.67c-.41-.79-.98-1.42-1.71-1.89-.73-.47-1.59-.7-2.58-.7s-1.82,.23-2.56,.7c-.74,.47-1.31,1.1-1.72,1.89-.41,.79-.62,1.69-.62,2.67s.21,1.88,.62,2.67c.41,.79,.98,1.42,1.72,1.89,.74,.47,1.59,.7,2.56,.7Z"/>
+                    <path d="M1251.25,197.76v-2.21h9.94v2.21h-9.94Zm6.52,12.07c-1.27,0-2.26-.36-2.98-1.09-.72-.73-1.08-1.72-1.08-2.97v-13.8h2.58v13.64c0,.62,.17,1.11,.52,1.47,.34,.36,.83,.55,1.44,.55h2.88v2.21h-3.36Z"/>
+                    <path d="M1271.1,209.82c-1.57,0-2.96-.29-4.17-.88-1.21-.59-2.16-1.42-2.84-2.49-.68-1.07-1.02-2.33-1.02-3.77s.29-2.69,.87-3.82c.58-1.13,1.38-2.02,2.41-2.67,1.03-.65,2.22-.98,3.58-.98,1.47,0,2.7,.32,3.68,.95,.98,.63,1.71,1.49,2.2,2.56s.73,2.27,.73,3.6c0,.21,0,.42-.01,.64,0,.22-.03,.42-.07,.59h-10.64c.09,.88,.38,1.62,.87,2.23s1.11,1.06,1.86,1.37c.76,.31,1.59,.46,2.51,.46h3.72v2.21h-3.67Zm-5.32-8.09h8.15c0-.35-.04-.73-.11-1.13s-.21-.79-.39-1.18c-.19-.38-.43-.73-.74-1.04-.31-.31-.69-.55-1.15-.74-.46-.19-.99-.28-1.61-.28-.65,0-1.23,.13-1.72,.38-.5,.25-.92,.59-1.27,1.01s-.63,.89-.81,1.41c-.19,.52-.3,1.05-.34,1.57Z"/>
+                    <path d="M1279.62,209.82v-2.21h6.83c.45,0,.84-.1,1.16-.29s.57-.45,.74-.77c.17-.32,.25-.65,.25-1.01,0-.34-.08-.65-.22-.94-.15-.29-.38-.52-.69-.7-.31-.18-.68-.27-1.11-.27h-2.88c-.91,0-1.71-.15-2.39-.46-.68-.31-1.21-.76-1.6-1.36-.38-.6-.57-1.33-.57-2.18,0-.73,.18-1.4,.53-2.02,.35-.62,.85-1.12,1.48-1.5,.63-.38,1.36-.57,2.18-.57h6.58v2.21h-6.33c-.58,0-1.04,.18-1.37,.53s-.5,.78-.5,1.26,.17,.87,.52,1.22,.83,.52,1.47,.52h2.74c1.03,0,1.89,.16,2.59,.49,.7,.33,1.23,.8,1.6,1.41s.55,1.37,.55,2.27c0,.77-.19,1.48-.56,2.14-.37,.66-.89,1.2-1.55,1.61-.66,.41-1.43,.62-2.31,.62h-7.14Z"/>
+                    <path d="M1292.5,197.76v-2.21h9.94v2.21h-9.94Zm6.52,12.07c-1.27,0-2.26-.36-2.98-1.09-.72-.73-1.08-1.72-1.08-2.97v-13.8h2.58v13.64c0,.62,.17,1.11,.52,1.47,.34,.36,.83,.55,1.44,.55h2.88v2.21h-3.36Z"/>
+                    <path d="M1311.81,210.16c-1.46,0-2.74-.33-3.86-.99-1.12-.66-2.01-1.56-2.66-2.69-.65-1.13-.98-2.39-.98-3.79s.33-2.67,.98-3.79c.65-1.13,1.54-2.03,2.66-2.69,1.12-.66,2.41-.99,3.86-.99s2.75,.33,3.88,.99c1.13,.66,2.02,1.56,2.66,2.69,.64,1.13,.97,2.39,.97,3.79s-.32,2.66-.97,3.79c-.64,1.13-1.53,2.03-2.66,2.69-1.13,.66-2.42,.99-3.88,.99Zm0-2.21c.99,0,1.85-.23,2.58-.7,.73-.47,1.3-1.1,1.71-1.89,.41-.79,.62-1.68,.62-2.67s-.21-1.88-.62-2.67c-.41-.79-.98-1.42-1.71-1.89-.73-.47-1.59-.7-2.58-.7s-1.82,.23-2.56,.7c-.74,.47-1.31,1.1-1.72,1.89-.41,.79-.62,1.69-.62,2.67s.21,1.88,.62,2.67c.41,.79,.98,1.42,1.72,1.89,.74,.47,1.59,.7,2.56,.7Z"/>
+                    <path d="M1329.54,209.82c-1.47,0-2.79-.32-3.95-.95-1.16-.63-2.07-1.49-2.74-2.56-.67-1.07-1.01-2.28-1.01-3.63s.34-2.55,1.01-3.63c.67-1.07,1.59-1.93,2.74-2.56,1.16-.63,2.47-.95,3.95-.95h1.68v2.21h-1.76c-.95,0-1.81,.22-2.56,.66-.76,.44-1.35,1.03-1.79,1.78-.44,.75-.66,1.58-.66,2.49s.22,1.75,.66,2.49c.44,.75,1.04,1.34,1.79,1.78,.76,.44,1.61,.66,2.56,.66h1.76v2.21h-1.68Z"/>
+                    <path d="M1340.85,210.16c-1.29,0-2.44-.27-3.46-.8-1.02-.53-1.81-1.27-2.38-2.23-.57-.95-.85-2.06-.85-3.33v-8.26h2.6v8.23c0,.86,.19,1.6,.56,2.23,.37,.63,.87,1.11,1.5,1.44,.62,.34,1.29,.5,2,.5s1.4-.17,2.03-.5c.62-.34,1.13-.82,1.51-1.44,.38-.62,.57-1.37,.57-2.23v-8.23h2.6v8.26c0,1.27-.29,2.38-.87,3.33-.58,.95-1.37,1.69-2.38,2.23-1.01,.53-2.16,.8-3.44,.8Z"/>
+                    <path d="M1357.03,215.51v-5.46c-1.05-.15-1.97-.5-2.79-1.05-.81-.55-1.45-1.27-1.92-2.16-.47-.89-.7-1.9-.7-3.04v-8.26h2.6v8.23c0,.86,.19,1.6,.56,2.23,.37,.63,.87,1.11,1.5,1.44,.62,.34,1.29,.5,2,.5s1.4-.17,2.03-.5c.62-.34,1.13-.82,1.51-1.44,.38-.62,.57-1.37,.57-2.23v-8.23h2.58v8.26c0,1.14-.23,2.15-.69,3.02-.46,.88-1.09,1.59-1.9,2.14-.81,.55-1.74,.91-2.79,1.08v5.46h-2.58Z"/>
+                    <path d="M1375.01,210.16c-1.38,0-2.58-.33-3.58-.99-1.01-.66-1.78-1.56-2.32-2.7-.54-1.14-.81-2.4-.81-3.78s.3-2.67,.9-3.79c.6-1.13,1.46-2.03,2.58-2.69,1.12-.66,2.46-.99,4.03-.99s2.81,.33,3.89,.98c1.08,.65,1.92,1.54,2.51,2.66,.59,1.12,.88,2.37,.88,3.75v7.22h-2.6v-2.91h-.06c-.28,.54-.66,1.06-1.13,1.55-.48,.5-1.07,.9-1.78,1.22-.71,.32-1.54,.48-2.49,.48Zm.67-2.21c.93,0,1.76-.23,2.48-.69,.72-.46,1.28-1.09,1.68-1.9,.4-.81,.6-1.72,.6-2.73s-.19-1.88-.57-2.66c-.38-.78-.93-1.4-1.64-1.86-.71-.46-1.54-.69-2.49-.69-1.01,0-1.87,.23-2.59,.7-.72,.47-1.27,1.1-1.65,1.89-.38,.79-.57,1.69-.57,2.7s.19,1.85,.56,2.65c.37,.79,.91,1.42,1.62,1.89,.71,.47,1.57,.7,2.58,.7Z"/>
+                    <path d="M1038.01,243.42v-2.21h6.83c.45,0,.84-.1,1.16-.29s.57-.45,.74-.77c.17-.32,.25-.65,.25-1.01,0-.34-.08-.65-.22-.94-.15-.29-.38-.52-.69-.7-.31-.18-.68-.27-1.11-.27h-2.88c-.91,0-1.71-.15-2.39-.46-.68-.31-1.21-.76-1.6-1.36-.38-.6-.57-1.33-.57-2.18,0-.73,.18-1.4,.53-2.02,.35-.62,.85-1.12,1.48-1.5,.63-.38,1.36-.57,2.18-.57h6.58v2.21h-6.33c-.58,0-1.04,.18-1.37,.53s-.5,.78-.5,1.26,.17,.87,.52,1.22,.83,.52,1.47,.52h2.74c1.03,0,1.89,.16,2.59,.49,.7,.33,1.23,.8,1.6,1.41s.55,1.37,.55,2.27c0,.77-.19,1.48-.56,2.14-.37,.66-.89,1.2-1.55,1.61-.66,.41-1.43,.62-2.31,.62h-7.14Z"/>
+                    <path d="M1058.89,243.76c-1.38,0-2.58-.33-3.58-.99-1.01-.66-1.78-1.56-2.32-2.7-.54-1.14-.81-2.4-.81-3.78s.3-2.67,.9-3.79c.6-1.13,1.46-2.03,2.58-2.69,1.12-.66,2.46-.99,4.03-.99s2.81,.33,3.89,.98c1.08,.65,1.92,1.54,2.51,2.66,.59,1.12,.88,2.37,.88,3.75v7.22h-2.6v-2.91h-.06c-.28,.54-.66,1.06-1.13,1.55-.48,.5-1.07,.9-1.78,1.22-.71,.32-1.54,.48-2.49,.48Zm.67-2.21c.93,0,1.76-.23,2.48-.69,.72-.46,1.28-1.09,1.68-1.9,.4-.81,.6-1.72,.6-2.73s-.19-1.88-.57-2.66c-.38-.78-.93-1.4-1.64-1.86-.71-.46-1.54-.69-2.49-.69-1.01,0-1.87,.23-2.59,.7-.72,.47-1.27,1.1-1.65,1.89-.38,.79-.57,1.69-.57,2.7s.19,1.85,.56,2.65c.37,.79,.91,1.42,1.62,1.89,.71,.47,1.57,.7,2.58,.7Z"/>
+                    <path d="M1071.05,243.42v-20.44h2.58v20.44h-2.58Z"/>
+                    <path d="M1081.32,243.24c-.9-.35-1.67-.85-2.32-1.53s-1.16-1.48-1.53-2.42c-.36-.94-.55-2-.55-3.18,0-1.49,.3-2.79,.91-3.88,.61-1.09,1.43-1.94,2.48-2.53,1.04-.6,2.23-.9,3.56-.9,.73,0,1.42,.12,2.09,.36,.66,.24,1.25,.58,1.76,1.01,.51,.43,.93,.93,1.25,1.51h.06v-8.71h2.58v13.22c0,1.59-.32,2.94-.97,4.07-.64,1.13-1.52,1.99-2.62,2.59-1.1,.6-2.34,.9-3.72,.9-1.08,0-2.07-.17-2.97-.52Zm5.33-2.34c.72-.43,1.29-1.04,1.71-1.82s.63-1.71,.63-2.77-.21-2.02-.63-2.81-.99-1.4-1.71-1.83c-.72-.43-1.52-.64-2.39-.64s-1.7,.22-2.41,.67c-.71,.45-1.27,1.06-1.69,1.85s-.63,1.7-.63,2.74,.21,2.02,.64,2.8,1,1.39,1.72,1.82c.72,.43,1.52,.64,2.39,.64s1.65-.21,2.37-.64Z"/>
+                    <path d="M1095.6,243.42v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M1102.18,243.42v-10.22c0-1.27,.36-2.26,1.08-2.98,.72-.72,1.71-1.08,2.98-1.08h2.94v2.21h-2.46c-.62,0-1.1,.18-1.44,.53s-.52,.85-.52,1.48v10.05h-2.58Z"/>
+                    <path d="M1115.17,243.24c-.9-.35-1.67-.85-2.32-1.53s-1.16-1.48-1.53-2.42c-.36-.94-.55-2-.55-3.18,0-1.49,.3-2.79,.91-3.88,.61-1.09,1.43-1.94,2.48-2.53,1.04-.6,2.23-.9,3.56-.9,.73,0,1.42,.12,2.09,.36,.66,.24,1.25,.58,1.76,1.01,.51,.43,.93,.93,1.25,1.51h.06v-8.71h2.58v13.22c0,1.59-.32,2.94-.97,4.07-.64,1.13-1.52,1.99-2.62,2.59-1.1,.6-2.34,.9-3.72,.9-1.08,0-2.07-.17-2.97-.52Zm5.33-2.34c.72-.43,1.29-1.04,1.71-1.82s.63-1.71,.63-2.77-.21-2.02-.63-2.81-.99-1.4-1.71-1.83c-.72-.43-1.52-.64-2.39-.64s-1.7,.22-2.41,.67c-.71,.45-1.27,1.06-1.69,1.85s-.63,1.7-.63,2.74,.21,2.02,.64,2.8,1,1.39,1.72,1.82c.72,.43,1.52,.64,2.39,.64s1.65-.21,2.37-.64Z"/>
+                    <path d="M1129.45,243.42v-14.28h2.6v14.28h-2.6Z"/>
+                    <path d="M1136.06,231.78l1.43-4.65c-.41-.13-.72-.37-.94-.71s-.32-.71-.32-1.08c0-.5,.18-.93,.55-1.29,.36-.35,.8-.53,1.3-.53,.56,0,1.01,.19,1.34,.57s.5,.84,.5,1.36c0,.35-.03,.69-.1,.99-.07,.31-.16,.66-.29,1.05l-1.29,4.28h-2.18Zm5.68,0l1.43-4.65c-.41-.13-.72-.37-.94-.71-.21-.35-.32-.71-.32-1.08,0-.5,.18-.93,.55-1.29s.8-.53,1.3-.53c.56,0,1.01,.19,1.34,.57s.5,.84,.5,1.36c0,.35-.03,.69-.1,.99-.07,.31-.16,.66-.29,1.05l-1.29,4.28h-2.18Z"/>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </td>
+
+
+          <!-- Progressione -->
+          <td class="giustosbagliato" scope="row">
+            <svg class="prog" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.02618 753.18203">
+              <defs>
+                <pattern id="Nuovo_pattern_3" data-name="Nuovo pattern 3" width="110" height="110" patternTransform="translate(293.91243 687.41618) scale(1 0.90671)" patternUnits="userSpaceOnUse" viewBox="0 0 110 110">
+                  <rect class="cls-1" width="110" height="110" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="11" cy="110" r="1.32" />
+                  <circle cx="22" cy="110" r="1.32" />
+                  <circle cx="33" cy="110" r="1.32" />
+                  <circle cx="44" cy="110" r="1.32" />
+                  <circle cx="55" cy="110" r="1.32" />
+                  <circle cx="65.45" cy="110" r="1.32" />
+                  <circle cx="77.55" cy="110" r="1.32" />
+                  <circle cx="88" cy="110" r="1.32" />
+                  <circle cx="99" cy="110" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle cx="110" cy="11" r="1.32" />
+                  <circle cx="110" cy="22" r="1.32" />
+                  <circle cx="110" cy="33" r="1.32" />
+                  <circle cx="110" cy="44" r="1.32" />
+                  <circle cx="110" cy="55" r="1.32" />
+                  <circle cx="110" cy="66" r="1.32" />
+                  <circle cx="110" cy="77" r="1.32" />
+                  <circle cx="110" cy="88" r="1.32" />
+                  <circle cx="110" cy="99" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cx="11" r="1.32" />
+                  <circle cx="22" r="1.32" />
+                  <circle cx="33" r="1.32" />
+                  <circle cx="44" r="1.32" />
+                  <circle cx="55" r="1.32" />
+                  <circle cx="65.45" r="1.32" />
+                  <circle cx="77.55" r="1.32" />
+                  <circle cx="88" r="1.32" />
+                  <circle cx="99" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle cx="5.25" cy="5.5" r="1.32" />
+                  <circle cx="16.25" cy="5.5" r="1.32" />
+                  <circle cx="27.25" cy="5.5" r="1.32" />
+                  <circle cx="38.25" cy="5.5" r="1.32" />
+                  <circle cx="49.25" cy="5.5" r="1.32" />
+                  <circle cx="60.25" cy="5.5" r="1.32" />
+                  <circle cx="71.75" cy="5.5" r="1.32" />
+                  <circle cx="82.75" cy="5.5" r="1.32" />
+                  <circle cx="93.75" cy="5.5" r="1.32" />
+                  <circle cx="104.75" cy="5.5" r="1.32" />
+                  <circle cy="11" r="1.32" />
+                  <circle cx="11" cy="11" r="1.32" />
+                  <circle cx="22" cy="11" r="1.32" />
+                  <circle cx="33" cy="11" r="1.32" />
+                  <circle cx="44" cy="11" r="1.32" />
+                  <circle cx="55" cy="11" r="1.32" />
+                  <circle cx="65.45" cy="11" r="1.32" />
+                  <circle cx="77.55" cy="11" r="1.32" />
+                  <circle cx="88" cy="11" r="1.32" />
+                  <circle cx="99" cy="11" r="1.32" />
+                  <circle cx="110" cy="11" r="1.32" />
+                  <circle cx="5.25" cy="16.5" r="1.32" />
+                  <circle cx="16.25" cy="16.5" r="1.32" />
+                  <circle cx="27.25" cy="16.5" r="1.32" />
+                  <circle cx="38.25" cy="16.5" r="1.32" />
+                  <circle cx="49.25" cy="16.5" r="1.32" />
+                  <circle cx="60.25" cy="16.5" r="1.32" />
+                  <circle cx="71.75" cy="16.5" r="1.32" />
+                  <circle cx="82.75" cy="16.5" r="1.32" />
+                  <circle cx="93.75" cy="16.5" r="1.32" />
+                  <circle cx="104.75" cy="16.5" r="1.32" />
+                  <circle cy="22" r="1.32" />
+                  <circle cx="11" cy="22" r="1.32" />
+                  <circle cx="22" cy="22" r="1.32" />
+                  <circle cx="33" cy="22" r="1.32" />
+                  <circle cx="44" cy="22" r="1.32" />
+                  <circle cx="55" cy="22" r="1.32" />
+                  <circle cx="65.45" cy="22" r="1.32" />
+                  <circle cx="77.55" cy="22" r="1.32" />
+                  <circle cx="88" cy="22" r="1.32" />
+                  <circle cx="99" cy="22" r="1.32" />
+                  <circle cx="110" cy="22" r="1.32" />
+                  <circle cx="5.25" cy="27.5" r="1.32" />
+                  <circle cx="16.25" cy="27.5" r="1.32" />
+                  <circle cx="27.25" cy="27.5" r="1.32" />
+                  <circle cx="38.25" cy="27.5" r="1.32" />
+                  <circle cx="49.25" cy="27.5" r="1.32" />
+                  <circle cx="60.25" cy="27.5" r="1.32" />
+                  <circle cx="71.75" cy="27.5" r="1.32" />
+                  <circle cx="82.75" cy="27.5" r="1.32" />
+                  <circle cx="93.75" cy="27.5" r="1.32" />
+                  <circle cx="104.75" cy="27.5" r="1.32" />
+                  <circle cy="33" r="1.32" />
+                  <circle cx="11" cy="33" r="1.32" />
+                  <circle cx="22" cy="33" r="1.32" />
+                  <circle cx="33" cy="33" r="1.32" />
+                  <circle cx="44" cy="33" r="1.32" />
+                  <circle cx="55" cy="33" r="1.32" />
+                  <circle cx="65.45" cy="33" r="1.32" />
+                  <circle cx="77.55" cy="33" r="1.32" />
+                  <circle cx="88" cy="33" r="1.32" />
+                  <circle cx="99" cy="33" r="1.32" />
+                  <circle cx="110" cy="33" r="1.32" />
+                  <circle cx="5.25" cy="38.5" r="1.32" />
+                  <circle cx="16.25" cy="38.5" r="1.32" />
+                  <circle cx="27.25" cy="38.5" r="1.32" />
+                  <circle cx="38.25" cy="38.5" r="1.32" />
+                  <circle cx="49.25" cy="38.5" r="1.32" />
+                  <circle cx="60.25" cy="38.5" r="1.32" />
+                  <circle cx="71.75" cy="38.5" r="1.32" />
+                  <circle cx="82.75" cy="38.5" r="1.32" />
+                  <circle cx="93.75" cy="38.5" r="1.32" />
+                  <circle cx="104.75" cy="38.5" r="1.32" />
+                  <circle cy="44" r="1.32" />
+                  <circle cx="11" cy="44" r="1.32" />
+                  <circle cx="22" cy="44" r="1.32" />
+                  <circle cx="33" cy="44" r="1.32" />
+                  <circle cx="44" cy="44" r="1.32" />
+                  <circle cx="55" cy="44" r="1.32" />
+                  <circle cx="65.45" cy="44" r="1.32" />
+                  <circle cx="77.55" cy="44" r="1.32" />
+                  <circle cx="88" cy="44" r="1.32" />
+                  <circle cx="99" cy="44" r="1.32" />
+                  <circle cx="110" cy="44" r="1.32" />
+                  <circle cx="5.25" cy="49.5" r="1.32" />
+                  <circle cx="16.25" cy="49.5" r="1.32" />
+                  <circle cx="27.25" cy="49.5" r="1.32" />
+                  <circle cx="38.25" cy="49.5" r="1.32" />
+                  <circle cx="49.25" cy="49.5" r="1.32" />
+                  <circle cx="60.25" cy="49.5" r="1.32" />
+                  <circle cx="71.75" cy="49.5" r="1.32" />
+                  <circle cx="82.75" cy="49.5" r="1.32" />
+                  <circle cx="93.75" cy="49.5" r="1.32" />
+                  <circle cx="104.75" cy="49.5" r="1.32" />
+                  <circle cy="55" r="1.32" />
+                  <circle cx="11" cy="55" r="1.32" />
+                  <circle cx="22" cy="55" r="1.32" />
+                  <circle cx="33" cy="55" r="1.32" />
+                  <circle cx="44" cy="55" r="1.32" />
+                  <circle cx="55" cy="55" r="1.32" />
+                  <circle cx="65.45" cy="55" r="1.32" />
+                  <circle cx="77.55" cy="55" r="1.32" />
+                  <circle cx="88" cy="55" r="1.32" />
+                  <circle cx="99" cy="55" r="1.32" />
+                  <circle cx="110" cy="55" r="1.32" />
+                  <circle cx="5.25" cy="60.5" r="1.32" />
+                  <circle cx="16.25" cy="60.5" r="1.32" />
+                  <circle cx="27.25" cy="60.5" r="1.32" />
+                  <circle cx="38.25" cy="60.5" r="1.32" />
+                  <circle cx="49.25" cy="60.5" r="1.32" />
+                  <circle cx="60.25" cy="60.5" r="1.32" />
+                  <circle cx="71.75" cy="60.5" r="1.32" />
+                  <circle cx="82.75" cy="60.5" r="1.32" />
+                  <circle cx="93.75" cy="60.5" r="1.32" />
+                  <circle cx="104.75" cy="60.5" r="1.32" />
+                  <circle cy="66" r="1.32" />
+                  <circle cx="11" cy="66" r="1.32" />
+                  <circle cx="22" cy="66" r="1.32" />
+                  <circle cx="33" cy="66" r="1.32" />
+                  <circle cx="44" cy="66" r="1.32" />
+                  <circle cx="55" cy="66" r="1.32" />
+                  <circle cx="65.45" cy="66" r="1.32" />
+                  <circle cx="77.55" cy="66" r="1.32" />
+                  <circle cx="88" cy="66" r="1.32" />
+                  <circle cx="99" cy="66" r="1.32" />
+                  <circle cx="110" cy="66" r="1.32" />
+                  <circle cx="5.25" cy="71.5" r="1.32" />
+                  <circle cx="16.25" cy="71.5" r="1.32" />
+                  <circle cx="27.25" cy="71.5" r="1.32" />
+                  <circle cx="38.25" cy="71.5" r="1.32" />
+                  <circle cx="49.25" cy="71.5" r="1.32" />
+                  <circle cx="60.25" cy="71.5" r="1.32" />
+                  <circle cx="71.75" cy="71.5" r="1.32" />
+                  <circle cx="82.75" cy="71.5" r="1.32" />
+                  <circle cx="93.75" cy="71.5" r="1.32" />
+                  <circle cx="104.75" cy="71.5" r="1.32" />
+                  <circle cy="77" r="1.32" />
+                  <circle cx="11" cy="77" r="1.32" />
+                  <circle cx="22" cy="77" r="1.32" />
+                  <circle cx="33" cy="77" r="1.32" />
+                  <circle cx="44" cy="77" r="1.32" />
+                  <circle cx="55" cy="77" r="1.32" />
+                  <circle cx="65.45" cy="77" r="1.32" />
+                  <circle cx="77.55" cy="77" r="1.32" />
+                  <circle cx="88" cy="77" r="1.32" />
+                  <circle cx="99" cy="77" r="1.32" />
+                  <circle cx="110" cy="77" r="1.32" />
+                  <circle cx="5.25" cy="82.5" r="1.32" />
+                  <circle cx="16.25" cy="82.5" r="1.32" />
+                  <circle cx="27.25" cy="82.5" r="1.32" />
+                  <circle cx="38.25" cy="82.5" r="1.32" />
+                  <circle cx="49.25" cy="82.5" r="1.32" />
+                  <circle cx="60.25" cy="82.5" r="1.32" />
+                  <circle cx="71.75" cy="82.5" r="1.32" />
+                  <circle cx="82.75" cy="82.5" r="1.32" />
+                  <circle cx="93.75" cy="82.5" r="1.32" />
+                  <circle cx="104.75" cy="82.5" r="1.32" />
+                  <circle cy="88" r="1.32" />
+                  <circle cx="11" cy="88" r="1.32" />
+                  <circle cx="22" cy="88" r="1.32" />
+                  <circle cx="33" cy="88" r="1.32" />
+                  <circle cx="44" cy="88" r="1.32" />
+                  <circle cx="55" cy="88" r="1.32" />
+                  <circle cx="65.45" cy="88" r="1.32" />
+                  <circle cx="77.55" cy="88" r="1.32" />
+                  <circle cx="88" cy="88" r="1.32" />
+                  <circle cx="99" cy="88" r="1.32" />
+                  <circle cx="110" cy="88" r="1.32" />
+                  <circle cx="5.25" cy="93.5" r="1.32" />
+                  <circle cx="16.25" cy="93.5" r="1.32" />
+                  <circle cx="27.25" cy="93.5" r="1.32" />
+                  <circle cx="38.25" cy="93.5" r="1.32" />
+                  <circle cx="49.25" cy="93.5" r="1.32" />
+                  <circle cx="60.25" cy="93.5" r="1.32" />
+                  <circle cx="71.75" cy="93.5" r="1.32" />
+                  <circle cx="82.75" cy="93.5" r="1.32" />
+                  <circle cx="93.75" cy="93.5" r="1.32" />
+                  <circle cx="104.75" cy="93.5" r="1.32" />
+                  <circle cy="99" r="1.32" />
+                  <circle cx="11" cy="99" r="1.32" />
+                  <circle cx="22" cy="99" r="1.32" />
+                  <circle cx="33" cy="99" r="1.32" />
+                  <circle cx="44" cy="99" r="1.32" />
+                  <circle cx="55" cy="99" r="1.32" />
+                  <circle cx="65.45" cy="99" r="1.32" />
+                  <circle cx="77.55" cy="99" r="1.32" />
+                  <circle cx="88" cy="99" r="1.32" />
+                  <circle cx="99" cy="99" r="1.32" />
+                  <circle cx="110" cy="99" r="1.32" />
+                  <circle cx="5.25" cy="104.5" r="1.32" />
+                  <circle cx="16.25" cy="104.5" r="1.32" />
+                  <circle cx="27.25" cy="104.5" r="1.32" />
+                  <circle cx="38.25" cy="104.5" r="1.32" />
+                  <circle cx="49.25" cy="104.5" r="1.32" />
+                  <circle cx="60.25" cy="104.5" r="1.32" />
+                  <circle cx="71.75" cy="104.5" r="1.32" />
+                  <circle cx="82.75" cy="104.5" r="1.32" />
+                  <circle cx="93.75" cy="104.5" r="1.32" />
+                  <circle cx="104.75" cy="104.5" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="11" cy="110" r="1.32" />
+                  <circle cx="22" cy="110" r="1.32" />
+                  <circle cx="33" cy="110" r="1.32" />
+                  <circle cx="44" cy="110" r="1.32" />
+                  <circle cx="55" cy="110" r="1.32" />
+                  <circle cx="65.45" cy="110" r="1.32" />
+                  <circle cx="77.55" cy="110" r="1.32" />
+                  <circle cx="88" cy="110" r="1.32" />
+                  <circle cx="99" cy="110" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cy="11" r="1.32" />
+                  <circle cy="22" r="1.32" />
+                  <circle cy="33" r="1.32" />
+                  <circle cy="44" r="1.32" />
+                  <circle cy="55" r="1.32" />
+                  <circle cy="66" r="1.32" />
+                  <circle cy="77" r="1.32" />
+                  <circle cy="88" r="1.32" />
+                  <circle cy="99" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cx="11" r="1.32" />
+                  <circle cx="22" r="1.32" />
+                  <circle cx="33" r="1.32" />
+                  <circle cx="44" r="1.32" />
+                  <circle cx="55" r="1.32" />
+                  <circle cx="65.45" r="1.32" />
+                  <circle cx="77.55" r="1.32" />
+                  <circle cx="88" r="1.32" />
+                  <circle cx="99" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle r="1.32" />
+                </pattern>
+                <pattern id="Nuovo_pattern_3-11" data-name="Nuovo pattern 3" width="110" height="110" patternTransform="translate(293.91243 622.81312) scale(1 0.90671)" patternUnits="userSpaceOnUse" viewBox="0 0 110 110">
+                  <rect class="cls-1" width="110" height="110" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="11" cy="110" r="1.32" />
+                  <circle cx="22" cy="110" r="1.32" />
+                  <circle cx="33" cy="110" r="1.32" />
+                  <circle cx="44" cy="110" r="1.32" />
+                  <circle cx="55" cy="110" r="1.32" />
+                  <circle cx="65.45" cy="110" r="1.32" />
+                  <circle cx="77.55" cy="110" r="1.32" />
+                  <circle cx="88" cy="110" r="1.32" />
+                  <circle cx="99" cy="110" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle cx="110" cy="11" r="1.32" />
+                  <circle cx="110" cy="22" r="1.32" />
+                  <circle cx="110" cy="33" r="1.32" />
+                  <circle cx="110" cy="44" r="1.32" />
+                  <circle cx="110" cy="55" r="1.32" />
+                  <circle cx="110" cy="66" r="1.32" />
+                  <circle cx="110" cy="77" r="1.32" />
+                  <circle cx="110" cy="88" r="1.32" />
+                  <circle cx="110" cy="99" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cx="11" r="1.32" />
+                  <circle cx="22" r="1.32" />
+                  <circle cx="33" r="1.32" />
+                  <circle cx="44" r="1.32" />
+                  <circle cx="55" r="1.32" />
+                  <circle cx="65.45" r="1.32" />
+                  <circle cx="77.55" r="1.32" />
+                  <circle cx="88" r="1.32" />
+                  <circle cx="99" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle cx="5.25" cy="5.5" r="1.32" />
+                  <circle cx="16.25" cy="5.5" r="1.32" />
+                  <circle cx="27.25" cy="5.5" r="1.32" />
+                  <circle cx="38.25" cy="5.5" r="1.32" />
+                  <circle cx="49.25" cy="5.5" r="1.32" />
+                  <circle cx="60.25" cy="5.5" r="1.32" />
+                  <circle cx="71.75" cy="5.5" r="1.32" />
+                  <circle cx="82.75" cy="5.5" r="1.32" />
+                  <circle cx="93.75" cy="5.5" r="1.32" />
+                  <circle cx="104.75" cy="5.5" r="1.32" />
+                  <circle cy="11" r="1.32" />
+                  <circle cx="11" cy="11" r="1.32" />
+                  <circle cx="22" cy="11" r="1.32" />
+                  <circle cx="33" cy="11" r="1.32" />
+                  <circle cx="44" cy="11" r="1.32" />
+                  <circle cx="55" cy="11" r="1.32" />
+                  <circle cx="65.45" cy="11" r="1.32" />
+                  <circle cx="77.55" cy="11" r="1.32" />
+                  <circle cx="88" cy="11" r="1.32" />
+                  <circle cx="99" cy="11" r="1.32" />
+                  <circle cx="110" cy="11" r="1.32" />
+                  <circle cx="5.25" cy="16.5" r="1.32" />
+                  <circle cx="16.25" cy="16.5" r="1.32" />
+                  <circle cx="27.25" cy="16.5" r="1.32" />
+                  <circle cx="38.25" cy="16.5" r="1.32" />
+                  <circle cx="49.25" cy="16.5" r="1.32" />
+                  <circle cx="60.25" cy="16.5" r="1.32" />
+                  <circle cx="71.75" cy="16.5" r="1.32" />
+                  <circle cx="82.75" cy="16.5" r="1.32" />
+                  <circle cx="93.75" cy="16.5" r="1.32" />
+                  <circle cx="104.75" cy="16.5" r="1.32" />
+                  <circle cy="22" r="1.32" />
+                  <circle cx="11" cy="22" r="1.32" />
+                  <circle cx="22" cy="22" r="1.32" />
+                  <circle cx="33" cy="22" r="1.32" />
+                  <circle cx="44" cy="22" r="1.32" />
+                  <circle cx="55" cy="22" r="1.32" />
+                  <circle cx="65.45" cy="22" r="1.32" />
+                  <circle cx="77.55" cy="22" r="1.32" />
+                  <circle cx="88" cy="22" r="1.32" />
+                  <circle cx="99" cy="22" r="1.32" />
+                  <circle cx="110" cy="22" r="1.32" />
+                  <circle cx="5.25" cy="27.5" r="1.32" />
+                  <circle cx="16.25" cy="27.5" r="1.32" />
+                  <circle cx="27.25" cy="27.5" r="1.32" />
+                  <circle cx="38.25" cy="27.5" r="1.32" />
+                  <circle cx="49.25" cy="27.5" r="1.32" />
+                  <circle cx="60.25" cy="27.5" r="1.32" />
+                  <circle cx="71.75" cy="27.5" r="1.32" />
+                  <circle cx="82.75" cy="27.5" r="1.32" />
+                  <circle cx="93.75" cy="27.5" r="1.32" />
+                  <circle cx="104.75" cy="27.5" r="1.32" />
+                  <circle cy="33" r="1.32" />
+                  <circle cx="11" cy="33" r="1.32" />
+                  <circle cx="22" cy="33" r="1.32" />
+                  <circle cx="33" cy="33" r="1.32" />
+                  <circle cx="44" cy="33" r="1.32" />
+                  <circle cx="55" cy="33" r="1.32" />
+                  <circle cx="65.45" cy="33" r="1.32" />
+                  <circle cx="77.55" cy="33" r="1.32" />
+                  <circle cx="88" cy="33" r="1.32" />
+                  <circle cx="99" cy="33" r="1.32" />
+                  <circle cx="110" cy="33" r="1.32" />
+                  <circle cx="5.25" cy="38.5" r="1.32" />
+                  <circle cx="16.25" cy="38.5" r="1.32" />
+                  <circle cx="27.25" cy="38.5" r="1.32" />
+                  <circle cx="38.25" cy="38.5" r="1.32" />
+                  <circle cx="49.25" cy="38.5" r="1.32" />
+                  <circle cx="60.25" cy="38.5" r="1.32" />
+                  <circle cx="71.75" cy="38.5" r="1.32" />
+                  <circle cx="82.75" cy="38.5" r="1.32" />
+                  <circle cx="93.75" cy="38.5" r="1.32" />
+                  <circle cx="104.75" cy="38.5" r="1.32" />
+                  <circle cy="44" r="1.32" />
+                  <circle cx="11" cy="44" r="1.32" />
+                  <circle cx="22" cy="44" r="1.32" />
+                  <circle cx="33" cy="44" r="1.32" />
+                  <circle cx="44" cy="44" r="1.32" />
+                  <circle cx="55" cy="44" r="1.32" />
+                  <circle cx="65.45" cy="44" r="1.32" />
+                  <circle cx="77.55" cy="44" r="1.32" />
+                  <circle cx="88" cy="44" r="1.32" />
+                  <circle cx="99" cy="44" r="1.32" />
+                  <circle cx="110" cy="44" r="1.32" />
+                  <circle cx="5.25" cy="49.5" r="1.32" />
+                  <circle cx="16.25" cy="49.5" r="1.32" />
+                  <circle cx="27.25" cy="49.5" r="1.32" />
+                  <circle cx="38.25" cy="49.5" r="1.32" />
+                  <circle cx="49.25" cy="49.5" r="1.32" />
+                  <circle cx="60.25" cy="49.5" r="1.32" />
+                  <circle cx="71.75" cy="49.5" r="1.32" />
+                  <circle cx="82.75" cy="49.5" r="1.32" />
+                  <circle cx="93.75" cy="49.5" r="1.32" />
+                  <circle cx="104.75" cy="49.5" r="1.32" />
+                  <circle cy="55" r="1.32" />
+                  <circle cx="11" cy="55" r="1.32" />
+                  <circle cx="22" cy="55" r="1.32" />
+                  <circle cx="33" cy="55" r="1.32" />
+                  <circle cx="44" cy="55" r="1.32" />
+                  <circle cx="55" cy="55" r="1.32" />
+                  <circle cx="65.45" cy="55" r="1.32" />
+                  <circle cx="77.55" cy="55" r="1.32" />
+                  <circle cx="88" cy="55" r="1.32" />
+                  <circle cx="99" cy="55" r="1.32" />
+                  <circle cx="110" cy="55" r="1.32" />
+                  <circle cx="5.25" cy="60.5" r="1.32" />
+                  <circle cx="16.25" cy="60.5" r="1.32" />
+                  <circle cx="27.25" cy="60.5" r="1.32" />
+                  <circle cx="38.25" cy="60.5" r="1.32" />
+                  <circle cx="49.25" cy="60.5" r="1.32" />
+                  <circle cx="60.25" cy="60.5" r="1.32" />
+                  <circle cx="71.75" cy="60.5" r="1.32" />
+                  <circle cx="82.75" cy="60.5" r="1.32" />
+                  <circle cx="93.75" cy="60.5" r="1.32" />
+                  <circle cx="104.75" cy="60.5" r="1.32" />
+                  <circle cy="66" r="1.32" />
+                  <circle cx="11" cy="66" r="1.32" />
+                  <circle cx="22" cy="66" r="1.32" />
+                  <circle cx="33" cy="66" r="1.32" />
+                  <circle cx="44" cy="66" r="1.32" />
+                  <circle cx="55" cy="66" r="1.32" />
+                  <circle cx="65.45" cy="66" r="1.32" />
+                  <circle cx="77.55" cy="66" r="1.32" />
+                  <circle cx="88" cy="66" r="1.32" />
+                  <circle cx="99" cy="66" r="1.32" />
+                  <circle cx="110" cy="66" r="1.32" />
+                  <circle cx="5.25" cy="71.5" r="1.32" />
+                  <circle cx="16.25" cy="71.5" r="1.32" />
+                  <circle cx="27.25" cy="71.5" r="1.32" />
+                  <circle cx="38.25" cy="71.5" r="1.32" />
+                  <circle cx="49.25" cy="71.5" r="1.32" />
+                  <circle cx="60.25" cy="71.5" r="1.32" />
+                  <circle cx="71.75" cy="71.5" r="1.32" />
+                  <circle cx="82.75" cy="71.5" r="1.32" />
+                  <circle cx="93.75" cy="71.5" r="1.32" />
+                  <circle cx="104.75" cy="71.5" r="1.32" />
+                  <circle cy="77" r="1.32" />
+                  <circle cx="11" cy="77" r="1.32" />
+                  <circle cx="22" cy="77" r="1.32" />
+                  <circle cx="33" cy="77" r="1.32" />
+                  <circle cx="44" cy="77" r="1.32" />
+                  <circle cx="55" cy="77" r="1.32" />
+                  <circle cx="65.45" cy="77" r="1.32" />
+                  <circle cx="77.55" cy="77" r="1.32" />
+                  <circle cx="88" cy="77" r="1.32" />
+                  <circle cx="99" cy="77" r="1.32" />
+                  <circle cx="110" cy="77" r="1.32" />
+                  <circle cx="5.25" cy="82.5" r="1.32" />
+                  <circle cx="16.25" cy="82.5" r="1.32" />
+                  <circle cx="27.25" cy="82.5" r="1.32" />
+                  <circle cx="38.25" cy="82.5" r="1.32" />
+                  <circle cx="49.25" cy="82.5" r="1.32" />
+                  <circle cx="60.25" cy="82.5" r="1.32" />
+                  <circle cx="71.75" cy="82.5" r="1.32" />
+                  <circle cx="82.75" cy="82.5" r="1.32" />
+                  <circle cx="93.75" cy="82.5" r="1.32" />
+                  <circle cx="104.75" cy="82.5" r="1.32" />
+                  <circle cy="88" r="1.32" />
+                  <circle cx="11" cy="88" r="1.32" />
+                  <circle cx="22" cy="88" r="1.32" />
+                  <circle cx="33" cy="88" r="1.32" />
+                  <circle cx="44" cy="88" r="1.32" />
+                  <circle cx="55" cy="88" r="1.32" />
+                  <circle cx="65.45" cy="88" r="1.32" />
+                  <circle cx="77.55" cy="88" r="1.32" />
+                  <circle cx="88" cy="88" r="1.32" />
+                  <circle cx="99" cy="88" r="1.32" />
+                  <circle cx="110" cy="88" r="1.32" />
+                  <circle cx="5.25" cy="93.5" r="1.32" />
+                  <circle cx="16.25" cy="93.5" r="1.32" />
+                  <circle cx="27.25" cy="93.5" r="1.32" />
+                  <circle cx="38.25" cy="93.5" r="1.32" />
+                  <circle cx="49.25" cy="93.5" r="1.32" />
+                  <circle cx="60.25" cy="93.5" r="1.32" />
+                  <circle cx="71.75" cy="93.5" r="1.32" />
+                  <circle cx="82.75" cy="93.5" r="1.32" />
+                  <circle cx="93.75" cy="93.5" r="1.32" />
+                  <circle cx="104.75" cy="93.5" r="1.32" />
+                  <circle cy="99" r="1.32" />
+                  <circle cx="11" cy="99" r="1.32" />
+                  <circle cx="22" cy="99" r="1.32" />
+                  <circle cx="33" cy="99" r="1.32" />
+                  <circle cx="44" cy="99" r="1.32" />
+                  <circle cx="55" cy="99" r="1.32" />
+                  <circle cx="65.45" cy="99" r="1.32" />
+                  <circle cx="77.55" cy="99" r="1.32" />
+                  <circle cx="88" cy="99" r="1.32" />
+                  <circle cx="99" cy="99" r="1.32" />
+                  <circle cx="110" cy="99" r="1.32" />
+                  <circle cx="5.25" cy="104.5" r="1.32" />
+                  <circle cx="16.25" cy="104.5" r="1.32" />
+                  <circle cx="27.25" cy="104.5" r="1.32" />
+                  <circle cx="38.25" cy="104.5" r="1.32" />
+                  <circle cx="49.25" cy="104.5" r="1.32" />
+                  <circle cx="60.25" cy="104.5" r="1.32" />
+                  <circle cx="71.75" cy="104.5" r="1.32" />
+                  <circle cx="82.75" cy="104.5" r="1.32" />
+                  <circle cx="93.75" cy="104.5" r="1.32" />
+                  <circle cx="104.75" cy="104.5" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="11" cy="110" r="1.32" />
+                  <circle cx="22" cy="110" r="1.32" />
+                  <circle cx="33" cy="110" r="1.32" />
+                  <circle cx="44" cy="110" r="1.32" />
+                  <circle cx="55" cy="110" r="1.32" />
+                  <circle cx="65.45" cy="110" r="1.32" />
+                  <circle cx="77.55" cy="110" r="1.32" />
+                  <circle cx="88" cy="110" r="1.32" />
+                  <circle cx="99" cy="110" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cy="11" r="1.32" />
+                  <circle cy="22" r="1.32" />
+                  <circle cy="33" r="1.32" />
+                  <circle cy="44" r="1.32" />
+                  <circle cy="55" r="1.32" />
+                  <circle cy="66" r="1.32" />
+                  <circle cy="77" r="1.32" />
+                  <circle cy="88" r="1.32" />
+                  <circle cy="99" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cx="11" r="1.32" />
+                  <circle cx="22" r="1.32" />
+                  <circle cx="33" r="1.32" />
+                  <circle cx="44" r="1.32" />
+                  <circle cx="55" r="1.32" />
+                  <circle cx="65.45" r="1.32" />
+                  <circle cx="77.55" r="1.32" />
+                  <circle cx="88" r="1.32" />
+                  <circle cx="99" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle r="1.32" />
+                </pattern>
+                <pattern id="Nuovo_pattern_3-17" data-name="Nuovo pattern 3" width="110" height="110" patternTransform="translate(293.91243 751.78131) scale(1 0.90671)" patternUnits="userSpaceOnUse" viewBox="0 0 110 110">
+                  <rect class="cls-1" width="110" height="110" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="11" cy="110" r="1.32" />
+                  <circle cx="22" cy="110" r="1.32" />
+                  <circle cx="33" cy="110" r="1.32" />
+                  <circle cx="44" cy="110" r="1.32" />
+                  <circle cx="55" cy="110" r="1.32" />
+                  <circle cx="65.45" cy="110" r="1.32" />
+                  <circle cx="77.55" cy="110" r="1.32" />
+                  <circle cx="88" cy="110" r="1.32" />
+                  <circle cx="99" cy="110" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle cx="110" cy="11" r="1.32" />
+                  <circle cx="110" cy="22" r="1.32" />
+                  <circle cx="110" cy="33" r="1.32" />
+                  <circle cx="110" cy="44" r="1.32" />
+                  <circle cx="110" cy="55" r="1.32" />
+                  <circle cx="110" cy="66" r="1.32" />
+                  <circle cx="110" cy="77" r="1.32" />
+                  <circle cx="110" cy="88" r="1.32" />
+                  <circle cx="110" cy="99" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cx="11" r="1.32" />
+                  <circle cx="22" r="1.32" />
+                  <circle cx="33" r="1.32" />
+                  <circle cx="44" r="1.32" />
+                  <circle cx="55" r="1.32" />
+                  <circle cx="65.45" r="1.32" />
+                  <circle cx="77.55" r="1.32" />
+                  <circle cx="88" r="1.32" />
+                  <circle cx="99" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle cx="5.25" cy="5.5" r="1.32" />
+                  <circle cx="16.25" cy="5.5" r="1.32" />
+                  <circle cx="27.25" cy="5.5" r="1.32" />
+                  <circle cx="38.25" cy="5.5" r="1.32" />
+                  <circle cx="49.25" cy="5.5" r="1.32" />
+                  <circle cx="60.25" cy="5.5" r="1.32" />
+                  <circle cx="71.75" cy="5.5" r="1.32" />
+                  <circle cx="82.75" cy="5.5" r="1.32" />
+                  <circle cx="93.75" cy="5.5" r="1.32" />
+                  <circle cx="104.75" cy="5.5" r="1.32" />
+                  <circle cy="11" r="1.32" />
+                  <circle cx="11" cy="11" r="1.32" />
+                  <circle cx="22" cy="11" r="1.32" />
+                  <circle cx="33" cy="11" r="1.32" />
+                  <circle cx="44" cy="11" r="1.32" />
+                  <circle cx="55" cy="11" r="1.32" />
+                  <circle cx="65.45" cy="11" r="1.32" />
+                  <circle cx="77.55" cy="11" r="1.32" />
+                  <circle cx="88" cy="11" r="1.32" />
+                  <circle cx="99" cy="11" r="1.32" />
+                  <circle cx="110" cy="11" r="1.32" />
+                  <circle cx="5.25" cy="16.5" r="1.32" />
+                  <circle cx="16.25" cy="16.5" r="1.32" />
+                  <circle cx="27.25" cy="16.5" r="1.32" />
+                  <circle cx="38.25" cy="16.5" r="1.32" />
+                  <circle cx="49.25" cy="16.5" r="1.32" />
+                  <circle cx="60.25" cy="16.5" r="1.32" />
+                  <circle cx="71.75" cy="16.5" r="1.32" />
+                  <circle cx="82.75" cy="16.5" r="1.32" />
+                  <circle cx="93.75" cy="16.5" r="1.32" />
+                  <circle cx="104.75" cy="16.5" r="1.32" />
+                  <circle cy="22" r="1.32" />
+                  <circle cx="11" cy="22" r="1.32" />
+                  <circle cx="22" cy="22" r="1.32" />
+                  <circle cx="33" cy="22" r="1.32" />
+                  <circle cx="44" cy="22" r="1.32" />
+                  <circle cx="55" cy="22" r="1.32" />
+                  <circle cx="65.45" cy="22" r="1.32" />
+                  <circle cx="77.55" cy="22" r="1.32" />
+                  <circle cx="88" cy="22" r="1.32" />
+                  <circle cx="99" cy="22" r="1.32" />
+                  <circle cx="110" cy="22" r="1.32" />
+                  <circle cx="5.25" cy="27.5" r="1.32" />
+                  <circle cx="16.25" cy="27.5" r="1.32" />
+                  <circle cx="27.25" cy="27.5" r="1.32" />
+                  <circle cx="38.25" cy="27.5" r="1.32" />
+                  <circle cx="49.25" cy="27.5" r="1.32" />
+                  <circle cx="60.25" cy="27.5" r="1.32" />
+                  <circle cx="71.75" cy="27.5" r="1.32" />
+                  <circle cx="82.75" cy="27.5" r="1.32" />
+                  <circle cx="93.75" cy="27.5" r="1.32" />
+                  <circle cx="104.75" cy="27.5" r="1.32" />
+                  <circle cy="33" r="1.32" />
+                  <circle cx="11" cy="33" r="1.32" />
+                  <circle cx="22" cy="33" r="1.32" />
+                  <circle cx="33" cy="33" r="1.32" />
+                  <circle cx="44" cy="33" r="1.32" />
+                  <circle cx="55" cy="33" r="1.32" />
+                  <circle cx="65.45" cy="33" r="1.32" />
+                  <circle cx="77.55" cy="33" r="1.32" />
+                  <circle cx="88" cy="33" r="1.32" />
+                  <circle cx="99" cy="33" r="1.32" />
+                  <circle cx="110" cy="33" r="1.32" />
+                  <circle cx="5.25" cy="38.5" r="1.32" />
+                  <circle cx="16.25" cy="38.5" r="1.32" />
+                  <circle cx="27.25" cy="38.5" r="1.32" />
+                  <circle cx="38.25" cy="38.5" r="1.32" />
+                  <circle cx="49.25" cy="38.5" r="1.32" />
+                  <circle cx="60.25" cy="38.5" r="1.32" />
+                  <circle cx="71.75" cy="38.5" r="1.32" />
+                  <circle cx="82.75" cy="38.5" r="1.32" />
+                  <circle cx="93.75" cy="38.5" r="1.32" />
+                  <circle cx="104.75" cy="38.5" r="1.32" />
+                  <circle cy="44" r="1.32" />
+                  <circle cx="11" cy="44" r="1.32" />
+                  <circle cx="22" cy="44" r="1.32" />
+                  <circle cx="33" cy="44" r="1.32" />
+                  <circle cx="44" cy="44" r="1.32" />
+                  <circle cx="55" cy="44" r="1.32" />
+                  <circle cx="65.45" cy="44" r="1.32" />
+                  <circle cx="77.55" cy="44" r="1.32" />
+                  <circle cx="88" cy="44" r="1.32" />
+                  <circle cx="99" cy="44" r="1.32" />
+                  <circle cx="110" cy="44" r="1.32" />
+                  <circle cx="5.25" cy="49.5" r="1.32" />
+                  <circle cx="16.25" cy="49.5" r="1.32" />
+                  <circle cx="27.25" cy="49.5" r="1.32" />
+                  <circle cx="38.25" cy="49.5" r="1.32" />
+                  <circle cx="49.25" cy="49.5" r="1.32" />
+                  <circle cx="60.25" cy="49.5" r="1.32" />
+                  <circle cx="71.75" cy="49.5" r="1.32" />
+                  <circle cx="82.75" cy="49.5" r="1.32" />
+                  <circle cx="93.75" cy="49.5" r="1.32" />
+                  <circle cx="104.75" cy="49.5" r="1.32" />
+                  <circle cy="55" r="1.32" />
+                  <circle cx="11" cy="55" r="1.32" />
+                  <circle cx="22" cy="55" r="1.32" />
+                  <circle cx="33" cy="55" r="1.32" />
+                  <circle cx="44" cy="55" r="1.32" />
+                  <circle cx="55" cy="55" r="1.32" />
+                  <circle cx="65.45" cy="55" r="1.32" />
+                  <circle cx="77.55" cy="55" r="1.32" />
+                  <circle cx="88" cy="55" r="1.32" />
+                  <circle cx="99" cy="55" r="1.32" />
+                  <circle cx="110" cy="55" r="1.32" />
+                  <circle cx="5.25" cy="60.5" r="1.32" />
+                  <circle cx="16.25" cy="60.5" r="1.32" />
+                  <circle cx="27.25" cy="60.5" r="1.32" />
+                  <circle cx="38.25" cy="60.5" r="1.32" />
+                  <circle cx="49.25" cy="60.5" r="1.32" />
+                  <circle cx="60.25" cy="60.5" r="1.32" />
+                  <circle cx="71.75" cy="60.5" r="1.32" />
+                  <circle cx="82.75" cy="60.5" r="1.32" />
+                  <circle cx="93.75" cy="60.5" r="1.32" />
+                  <circle cx="104.75" cy="60.5" r="1.32" />
+                  <circle cy="66" r="1.32" />
+                  <circle cx="11" cy="66" r="1.32" />
+                  <circle cx="22" cy="66" r="1.32" />
+                  <circle cx="33" cy="66" r="1.32" />
+                  <circle cx="44" cy="66" r="1.32" />
+                  <circle cx="55" cy="66" r="1.32" />
+                  <circle cx="65.45" cy="66" r="1.32" />
+                  <circle cx="77.55" cy="66" r="1.32" />
+                  <circle cx="88" cy="66" r="1.32" />
+                  <circle cx="99" cy="66" r="1.32" />
+                  <circle cx="110" cy="66" r="1.32" />
+                  <circle cx="5.25" cy="71.5" r="1.32" />
+                  <circle cx="16.25" cy="71.5" r="1.32" />
+                  <circle cx="27.25" cy="71.5" r="1.32" />
+                  <circle cx="38.25" cy="71.5" r="1.32" />
+                  <circle cx="49.25" cy="71.5" r="1.32" />
+                  <circle cx="60.25" cy="71.5" r="1.32" />
+                  <circle cx="71.75" cy="71.5" r="1.32" />
+                  <circle cx="82.75" cy="71.5" r="1.32" />
+                  <circle cx="93.75" cy="71.5" r="1.32" />
+                  <circle cx="104.75" cy="71.5" r="1.32" />
+                  <circle cy="77" r="1.32" />
+                  <circle cx="11" cy="77" r="1.32" />
+                  <circle cx="22" cy="77" r="1.32" />
+                  <circle cx="33" cy="77" r="1.32" />
+                  <circle cx="44" cy="77" r="1.32" />
+                  <circle cx="55" cy="77" r="1.32" />
+                  <circle cx="65.45" cy="77" r="1.32" />
+                  <circle cx="77.55" cy="77" r="1.32" />
+                  <circle cx="88" cy="77" r="1.32" />
+                  <circle cx="99" cy="77" r="1.32" />
+                  <circle cx="110" cy="77" r="1.32" />
+                  <circle cx="5.25" cy="82.5" r="1.32" />
+                  <circle cx="16.25" cy="82.5" r="1.32" />
+                  <circle cx="27.25" cy="82.5" r="1.32" />
+                  <circle cx="38.25" cy="82.5" r="1.32" />
+                  <circle cx="49.25" cy="82.5" r="1.32" />
+                  <circle cx="60.25" cy="82.5" r="1.32" />
+                  <circle cx="71.75" cy="82.5" r="1.32" />
+                  <circle cx="82.75" cy="82.5" r="1.32" />
+                  <circle cx="93.75" cy="82.5" r="1.32" />
+                  <circle cx="104.75" cy="82.5" r="1.32" />
+                  <circle cy="88" r="1.32" />
+                  <circle cx="11" cy="88" r="1.32" />
+                  <circle cx="22" cy="88" r="1.32" />
+                  <circle cx="33" cy="88" r="1.32" />
+                  <circle cx="44" cy="88" r="1.32" />
+                  <circle cx="55" cy="88" r="1.32" />
+                  <circle cx="65.45" cy="88" r="1.32" />
+                  <circle cx="77.55" cy="88" r="1.32" />
+                  <circle cx="88" cy="88" r="1.32" />
+                  <circle cx="99" cy="88" r="1.32" />
+                  <circle cx="110" cy="88" r="1.32" />
+                  <circle cx="5.25" cy="93.5" r="1.32" />
+                  <circle cx="16.25" cy="93.5" r="1.32" />
+                  <circle cx="27.25" cy="93.5" r="1.32" />
+                  <circle cx="38.25" cy="93.5" r="1.32" />
+                  <circle cx="49.25" cy="93.5" r="1.32" />
+                  <circle cx="60.25" cy="93.5" r="1.32" />
+                  <circle cx="71.75" cy="93.5" r="1.32" />
+                  <circle cx="82.75" cy="93.5" r="1.32" />
+                  <circle cx="93.75" cy="93.5" r="1.32" />
+                  <circle cx="104.75" cy="93.5" r="1.32" />
+                  <circle cy="99" r="1.32" />
+                  <circle cx="11" cy="99" r="1.32" />
+                  <circle cx="22" cy="99" r="1.32" />
+                  <circle cx="33" cy="99" r="1.32" />
+                  <circle cx="44" cy="99" r="1.32" />
+                  <circle cx="55" cy="99" r="1.32" />
+                  <circle cx="65.45" cy="99" r="1.32" />
+                  <circle cx="77.55" cy="99" r="1.32" />
+                  <circle cx="88" cy="99" r="1.32" />
+                  <circle cx="99" cy="99" r="1.32" />
+                  <circle cx="110" cy="99" r="1.32" />
+                  <circle cx="5.25" cy="104.5" r="1.32" />
+                  <circle cx="16.25" cy="104.5" r="1.32" />
+                  <circle cx="27.25" cy="104.5" r="1.32" />
+                  <circle cx="38.25" cy="104.5" r="1.32" />
+                  <circle cx="49.25" cy="104.5" r="1.32" />
+                  <circle cx="60.25" cy="104.5" r="1.32" />
+                  <circle cx="71.75" cy="104.5" r="1.32" />
+                  <circle cx="82.75" cy="104.5" r="1.32" />
+                  <circle cx="93.75" cy="104.5" r="1.32" />
+                  <circle cx="104.75" cy="104.5" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="11" cy="110" r="1.32" />
+                  <circle cx="22" cy="110" r="1.32" />
+                  <circle cx="33" cy="110" r="1.32" />
+                  <circle cx="44" cy="110" r="1.32" />
+                  <circle cx="55" cy="110" r="1.32" />
+                  <circle cx="65.45" cy="110" r="1.32" />
+                  <circle cx="77.55" cy="110" r="1.32" />
+                  <circle cx="88" cy="110" r="1.32" />
+                  <circle cx="99" cy="110" r="1.32" />
+                  <circle cx="110" cy="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cy="11" r="1.32" />
+                  <circle cy="22" r="1.32" />
+                  <circle cy="33" r="1.32" />
+                  <circle cy="44" r="1.32" />
+                  <circle cy="55" r="1.32" />
+                  <circle cy="66" r="1.32" />
+                  <circle cy="77" r="1.32" />
+                  <circle cy="88" r="1.32" />
+                  <circle cy="99" r="1.32" />
+                  <circle cy="110" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle r="1.32" />
+                  <circle cx="11" r="1.32" />
+                  <circle cx="22" r="1.32" />
+                  <circle cx="33" r="1.32" />
+                  <circle cx="44" r="1.32" />
+                  <circle cx="55" r="1.32" />
+                  <circle cx="65.45" r="1.32" />
+                  <circle cx="77.55" r="1.32" />
+                  <circle cx="88" r="1.32" />
+                  <circle cx="99" r="1.32" />
+                  <circle cx="110" r="1.32" />
+                  <circle r="1.32" />
+                </pattern>
+              </defs>
+
+              <g id="QUESTION12">
+                <rect class=" cls-1 cls-55" x="0.992" y="706.85034" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 1458.8983) rotate(-180)" />
+              </g>
+              <g id="QUESTION11">
+                <rect class=" cls-1 cls-55" x="0.992" y="642.48521" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 1330.16804) rotate(180)" />
+              </g>
+              <g id="QUESTION10">
+                <rect class=" cls-1 cls-55" x="0.992" y="578.13912" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 1201.47587) rotate(180)" />
+              </g>
+              <g id="QUESTION9">
+                <rect class=" cls-1 cls-55" x="0.992" y="514.20169" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 1073.60101) rotate(-180)" />
+              </g>
+              <g id="QUESTION8">
+                <rect class=" cls-1 cls-55" x="0.992" y="450.26427" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 945.72616) rotate(180)" />
+              </g>
+              <g id="QUESTION7">
+                <rect class=" cls-1 cls-55" x="0.992" y="385.91818" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 817.03399) rotate(-180)" />
+              </g>
+              <g id="QUESTION6">
+                <rect class=" cls-1 cls-55" x="0.992" y="321.57209" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 688.34181) rotate(-180)" />
+              </g>
+              <g id="QUESTION5">
+                <rect class=" cls-1 cls-55" x="0.992" y="257.63467" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 560.46696) rotate(180)" />
+              </g>
+              <g id="QUESTION4">
+                <rect class=" cls-1 cls-55" x="0.992" y="193.69724" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 432.59211) rotate(180)" />
+              </g>
+              <g id="QUESTION3">
+                <rect class=" cls-1 cls-55" x="0.992" y="129.75982" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 304.71726) rotate(180)" />
+              </g>
+              <g id="QUESTION2">
+                <rect class=" cls-1 cls-55" x="0.992" y="65.82239" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 176.84241) rotate(-180)" />
+              </g>
+              <g id="QUESTION1">
+                <rect class=" cls-1 cls-55" x="0.992" y="1.21933" width="36.02749" height="45.19763" rx="17.85827" transform="translate(38.0115 47.63629) rotate(180)" />
+              </g>
+              <g id="TEXTURE">
+                <path class="cls-2"
+                  d="M18.85027,385.91818h.311A17.85827,17.85827,0,0,1,37.0195,403.77645v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,413.25754v-9.48109A17.85827,17.85827,0,0,1,18.85027,385.91818Z" />
+                <path class="cls-2"
+                  d="M18.85027,321.57209h.311A17.85827,17.85827,0,0,1,37.0195,339.43036v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,348.91145v-9.48109A17.85827,17.85827,0,0,1,18.85027,321.57209Z" />
+                <path class="cls-2"
+                  d="M18.85027,257.63467h.311A17.85827,17.85827,0,0,1,37.0195,275.49294V284.974a17.85827,17.85827,0,0,1-17.85827,17.85826h-.311A17.85827,17.85827,0,0,1,.992,284.974v-9.48109A17.85827,17.85827,0,0,1,18.85027,257.63467Z" />
+                <path class="cls-2"
+                  d="M18.85027,193.69724h.311A17.85827,17.85827,0,0,1,37.0195,211.55551v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,221.0366v-9.48109A17.85827,17.85827,0,0,1,18.85027,193.69724Z" />
+                <path class="cls-2"
+                  d="M18.85027,65.82239h.311A17.85827,17.85827,0,0,1,37.0195,83.68066v9.48109A17.85827,17.85827,0,0,1,19.16123,111.02h-.311A17.85827,17.85827,0,0,1,.992,93.16175V83.68066A17.85827,17.85827,0,0,1,18.85027,65.82239Z" />
+                <path class="cls-2" d="M18.85027,1.21933h.311A17.85827,17.85827,0,0,1,37.0195,19.0776v9.48109A17.85827,17.85827,0,0,1,19.16123,46.417h-.311A17.85827,17.85827,0,0,1,.992,28.55869V19.0776A17.85827,17.85827,0,0,1,18.85027,1.21933Z" />
+                <path class="cls-2"
+                  d="M18.85027,129.75982h.311A17.85826,17.85826,0,0,1,37.0195,147.61808v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,157.09917v-9.48109A17.85826,17.85826,0,0,1,18.85027,129.75982Z" />
+                <path class="cls-2"
+                  d="M18.85027,642.48521h.311A17.85827,17.85827,0,0,1,37.0195,660.34348v9.48108a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,669.82456v-9.48108A17.85827,17.85827,0,0,1,18.85027,642.48521Z" />
+                <path class="cls-2"
+                  d="M18.85027,706.85034h.311A17.85827,17.85827,0,0,1,37.0195,724.70861v9.48109A17.85826,17.85826,0,0,1,19.16123,752.048h-.311A17.85826,17.85826,0,0,1,.992,734.1897v-9.48109A17.85827,17.85827,0,0,1,18.85027,706.85034Z" />
+                <path class="cls-2"
+                  d="M18.85027,578.13912h.311A17.85827,17.85827,0,0,1,37.0195,595.99739v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,605.47848v-9.48109A17.85827,17.85827,0,0,1,18.85027,578.13912Z" />
+                <path class="cls-2"
+                  d="M18.85027,514.20169h.311A17.85827,17.85827,0,0,1,37.0195,532.06v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85827h-.311A17.85827,17.85827,0,0,1,.992,541.54105V532.06A17.85827,17.85827,0,0,1,18.85027,514.20169Z" />
+                <path class="cls-2"
+                  d="M18.85027,450.26427h.311A17.85827,17.85827,0,0,1,37.0195,468.12254v9.48109a17.85827,17.85827,0,0,1-17.85827,17.85826h-.311A17.85827,17.85827,0,0,1,.992,477.60363v-9.48109A17.85827,17.85827,0,0,1,18.85027,450.26427Z" />
+              </g>
+            </svg>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </main>
+</body>
